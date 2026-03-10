@@ -1,0 +1,63 @@
+[     278ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/noise.png:0
+[     311ms] [ERROR] In HTML, %s cannot be a descendant of <%s>.
+This will cause a hydration error.%s <div> p 
+
+  ...
+    <LoadableComponent>
+      <ProcessTimeline>
+        ...
+          <div className="relative">
+            <div>
+            <motion.div>
+            <div className="space-y-12...">
+              <div className="relative f...">
+                <div>
+                <div>
+                <motion.div initial={{opacity:0,x:50,y:20}} whileInView={{opacity:1,x:0,y:0}} viewport={{once:true, ...}} ...>
+                  <div className="w-full lg:..." style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                    <div>
+                    <SpotlightCard className="group rela...">
+                      <div className="group dark..." onMouseMove={function handleMouseMove} ...>
+                        <motion.div>
+                        <motion.div>
+                        <div>
+                        <div className="relative z...">
+                          <div>
+                          <div>
+                          <div className="relative z...">
+                            <div>
+                            <p>
+                            <div className="space-y-4 ...">
+                              <div>
+>                               <p className="font-semibold text-foreground mb-1.5 flex items-center gap-2">
+>                                 <div
+>                                   className="w-2 h-2 rounded-full bg-muda-green shadow-[0_0_5px_rgba(30,142,62,0.5)]"
+>                                 >
+                                  ...
+                                ...
+                              ...
+              ...
+ @ http://localhost:3000/_next/static/chunks/b696e_next_dist_47a63982._.js:3127
+[     393ms] Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+    at throwOnHydrationMismatch (http://localhost:3000/_next/static/chunks/b696e_next_dist_compiled_react-dom_9d86dad3._.js:3348:56)
+    at beginWork (http://localhost:3000/_next/static/chunks/b696e_next_dist_compiled_react-dom_9d86dad3._.js:6775:918)
+    at runWithFiberInDEV (http://localhost:3000/_next/static/chunks/b696e_next_dist_compiled_react-dom_9d86dad3._.js:965:74)
+    at performUnitOfWork (http://localhost:3000/_next/static/chunks/b696e_next_dist_compiled_react-dom_9d86dad3._.js:9562:97)
+    at workLoopConcurrentByScheduler (http://localhost:3000/_next/static/chunks/b696e_next_dist_compiled_react-dom_9d86dad3._.js:9558:58)
+    at renderRootConcurrent (http://localhost:3000/_next/static/chunks/b696e_next_dist_compiled_react-dom_9d86dad3._.js:9541:71)
+    at performWorkOnRoot (http://localhost:3000/_next/static/chunks/b696e_next_dist_compiled_react-dom_9d86dad3._.js:9068:150)
+    at performWorkOnRootViaSchedulerTask (http://localhost:3000/_next/static/chunks/b696e_next_dist_compiled_react-dom_9d86dad3._.js:10230:9)
+    at MessagePort.performWorkUntilDeadline (http://localhost:3000/_next/static/chunks/b696e_next_dist_compiled_e53970a1._.js:2647:64)
+[     946ms] [WARNING] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly. @ http://localhost:3000/_next/static/chunks/b696e_next_dist_47a63982._.js:2297
+[    2180ms] [WARNING] Image with src "/logo.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading @ http://localhost:3000/_next/static/chunks/b696e_next_dist_47a63982._.js:2297

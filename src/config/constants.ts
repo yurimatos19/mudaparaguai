@@ -1,0 +1,100 @@
+import { CopyCheck, BriefcaseBusiness, Settings2, Globe2, Laptop, Factory } from "lucide-react";
+
+export const PROCESS_STEPS = [
+    {
+        title: "Diagnóstico & Estratégia",
+        description: "Análise profunda do seu cenário atual, identificação de riscos e desenho do roadmap ideal para a migração.",
+        icon: CopyCheck,
+        color: "text-muda-green",
+        bgColor: "bg-muda-green/10",
+        borderColor: "border-muda-green/30",
+        glow: "bg-muda-green/5",
+        receives: "Relatório executivo + Roadmap de estruturação",
+        duration: "Dias, não meses",
+        risks: "Alinhamento prévio evita surpresas fiscais e societárias.",
+    },
+    {
+        title: "Execução & Registros",
+        description: "Estruturação societária, abertura de empresa, emissão do RUC e toda documentação legal e administrativa.",
+        icon: BriefcaseBusiness,
+        color: "text-muda-yellow",
+        bgColor: "bg-muda-yellow/10",
+        borderColor: "border-muda-yellow/30",
+        glow: "bg-muda-yellow/5",
+        receives: "Kit societário + RUC + Chaves de acesso",
+        duration: "Depende da agilidade documental",
+        risks: "Trilha registrada passo a passo. Zero atalhos informais.",
+    },
+    {
+        title: "Operação & Compliance",
+        description: "Terceirize a rotina contábil e fiscal. Nosso suporte contínuo mantém sua empresa em total conformidade no Paraguai, enquanto você foca apenas em vender.",
+        icon: Settings2,
+        color: "text-muda-blue",
+        bgColor: "bg-muda-blue/10",
+        borderColor: "border-muda-blue/30",
+        glow: "bg-muda-blue/5",
+        receives: "Relatórios mensais + Status no Portal do Cliente",
+        duration: "Contínuo (mensal)",
+        risks: "Manutenção da “substância econômica” para auditorias.",
+    },
+    {
+        title: "Trilha Export/Industrial",
+        description: "Habilitação em regimes de incentivo, como a Lei de Maquila, para indústrias e empresas de exportação.",
+        icon: Globe2,
+        color: "text-muda-red",
+        bgColor: "bg-muda-red/10",
+        borderColor: "border-muda-red/30",
+        glow: "bg-muda-red/5",
+        receives: "Plano de implantação Maquila + Checklist de requisitos",
+        duration: "Análise caso a caso",
+        risks: "Estudo de viabilidade criterioso antes de investir.",
+    }
+];
+
+export const PERSONAS = [
+    {
+        id: "digital",
+        title: "E-commerce & Digital",
+        icon: Laptop,
+        color: "muda-green",
+        bgLight: "bg-muda-green/5",
+        bgDark: "bg-muda-green/10",
+        border: "border-muda-green/20",
+        glow: "shadow-[0_0_30px_rgba(30,142,62,0.15)]",
+        spotlightGlow: "rgba(30,142,62,0.15)",
+        description: "Prestadores de serviços B2B, Infoprodutores e E-commerces fadigados com a alta carga e complexidade tributária no Brasil.",
+        pain: "Margem de lucro esmagada pelo sistema tributário atual.",
+        solution: "Estruturação para faturamento global com carga otimizada (ex: regime IVA reduzido), mantendo atendimento ao cliente brasileiro sem atrito jurídico.",
+        benefits: ["Aumento imediato de Margem Líquida", "Escala de faturamento sem travas", "Recebimento simplificado"]
+    },
+    {
+        id: "industrial",
+        title: "Industrial & Supply (Maquila)",
+        icon: Factory,
+        color: "muda-yellow",
+        bgLight: "bg-muda-yellow/5",
+        bgDark: "bg-muda-yellow/10",
+        border: "border-muda-yellow/30",
+        glow: "shadow-[0_0_30px_rgba(244,195,0,0.15)]",
+        spotlightGlow: "rgba(244,195,0,0.15)",
+        description: "Indústrias de transformação, atacadistas e importadores que buscam produzir com extrema competitividade para re-exportar ao Mercosul.",
+        pain: "Custo Brasil (energia, leis trabalhistas inflexíveis e impostos em cascata).",
+        solution: "Acesso direto à Lei de Maquila. Energia limpa e barata, regras trabalhistas modernas e imposto único de 1% sobre o valor agregado na exportação.",
+        benefits: ["Isenção de Imposto de Importação em insumos", "Custo de energia até 60% menor", "Imposto único (1%) via Maquila"]
+    },
+    {
+        id: "global",
+        title: "Investidor & Global",
+        icon: Globe2,
+        color: "muda-blue",
+        bgLight: "bg-muda-blue/5",
+        bgDark: "bg-muda-blue/10",
+        border: "border-muda-blue/20",
+        glow: "shadow-[0_0_30px_rgba(26,79,163,0.15)]",
+        spotlightGlow: "rgba(26,79,163,0.15)",
+        description: "Profissionais de alta renda operando 100% remoto, desenvolvedores globais ou investidores dolarizados.",
+        pain: "Risco país e insegurança jurídica na alocação de patrimônio e dividendos.",
+        solution: "Abertura de estrutura legal para recebimento em múltiplas moedas (USD/EUR) com sistema de tributação territorial, isolando os riscos sistêmicos locais.",
+        benefits: ["Proteção cambial e patrimonial", "Sistema territorial de impostos", "Flexibilidade bancária global"]
+    }
+];
