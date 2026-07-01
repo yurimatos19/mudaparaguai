@@ -20,76 +20,62 @@ const dontList = [
 
 export function SecurityCompliance(): React.ReactElement {
     return (
-        <section className="py-24 bg-background border-t border-white/5 relative overflow-hidden text-muda-offwhite">
-            {/* Top border gradient: green → red */}
-            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-muda-green via-muda-green/30 to-muda-red pointer-events-none" />
-
-            {/* Background Decor */}
-            <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-50">
-                <div className="absolute top-0 right-1/4 w-96 h-96 bg-muda-blue/20 rounded-full blur-3xl mix-blend-screen" />
-                <div className="absolute bottom-40 left-10 w-64 h-64 bg-muda-red/10 rounded-full blur-[100px] mix-blend-screen" />
-            </div>
-
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl relative z-10">
-                <div className="text-center mb-16 lg:mb-20">
-                    {/* ShieldAlert with glowing ring */}
+        <section className="py-20 lg:py-28 bg-background border-t border-border relative overflow-hidden">
+            
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl relative z-10">
+                <div className="text-center mb-16">
+                    {/* ShieldAlert with subtle background */}
                     <motion.div
-                        initial={{ opacity: 0, scale: 0.8 }}
+                        initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
-                        className="relative flex items-center justify-center mx-auto mb-8 w-fit"
+                        className="flex items-center justify-center mx-auto mb-6 w-fit"
                     >
-                        {/* Outer glow ring */}
-                        <div className="absolute w-32 h-32 rounded-full bg-white/5 blur-xl animate-pulse" />
-                        <div className="absolute w-28 h-28 rounded-full border border-white/10" />
-                        <div className="absolute w-24 h-24 rounded-full border border-white/5" />
-                        {/* Icon container */}
-                        <div className="w-20 h-20 rounded-2xl bg-white/10 flex items-center justify-center backdrop-blur-md border border-white/10 shadow-[0_0_40px_rgba(255,255,255,0.08)] relative z-10">
-                            <ShieldAlert className="w-10 h-10 text-white" />
+                        <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center border border-border shadow-sm">
+                            <ShieldAlert className="w-6 h-6 text-primary" />
                         </div>
                     </motion.div>
 
                     <motion.h2
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 15 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ delay: 0.1 }}
-                        className="text-3xl sm:text-4xl lg:text-5xl font-sora font-semibold text-white tracking-tight mb-6"
+                        transition={{ delay: 0.05 }}
+                        className="text-3xl sm:text-4xl lg:text-4xl font-serif font-normal text-foreground tracking-tight mb-4"
                     >
-                        Compliance não é seção.{" "}
-                        <br />
-                        <span className="bg-gradient-to-r from-muda-green via-white/80 to-muda-blue bg-clip-text text-transparent">
-                            É política.
+                        Compliance não é uma seção. <br />
+                        <span className="text-primary italic font-semibold">
+                            É política institucional.
                         </span>
                     </motion.h2>
 
                     <motion.p
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 15 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ delay: 0.2 }}
-                        className="text-lg text-white/70 max-w-2xl mx-auto leading-relaxed"
+                        transition={{ delay: 0.1 }}
+                        className="text-base text-muted-foreground max-w-xl mx-auto"
                     >
-                        Se a intenção for sonegação, fraude, ocultação ou qualquer atalho ilícito, nós <strong className="text-muda-red font-semibold">não seguimos</strong>. A MUDA PARAGUAI existe para estruturar legado — não risco penal.
+                        Se a intenção for atalho fiscal, sonegação ou fraude, nós <strong className="text-muda-red font-semibold">não atendemos</strong>. A Muda Paraguai existe para estruturar conformidade e legado.
                     </motion.p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {/* Nós Fazemos — green left border */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {/* Nós Fazemos */}
                     <motion.div
-                        initial={{ opacity: 0, x: -30 }}
+                        initial={{ opacity: 0, x: -15 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.5, delay: 0.3 }}
+                        transition={{ duration: 0.4, delay: 0.15 }}
                     >
-                        <Card className="p-8 h-full bg-white/5 border-white/10 backdrop-blur-md border-l-4 border-l-muda-green rounded-2xl">
-                            <h3 className="text-xl font-sora font-semibold text-white mb-6 flex items-center gap-3">
-                                <CheckCircle2 className="w-6 h-6 text-muda-green" />
+                        <Card className="p-6 sm:p-8 h-full bg-card border border-border border-l-4 border-l-muda-green rounded-2xl shadow-sm">
+                            <h3 className="text-lg font-serif font-bold text-foreground mb-5 flex items-center gap-2.5">
+                                <CheckCircle2 className="w-5 h-5 text-muda-green" />
                                 Nós Fazemos
                             </h3>
-                            <ul className="space-y-4">
+                            <ul className="space-y-4 text-sm text-muted-foreground">
                                 {doList.map((item, idx) => (
-                                    <li key={idx} className="flex items-start gap-3 text-white/80">
+                                    <li key={idx} className="flex items-start gap-2.5">
                                         <span className="w-1.5 h-1.5 rounded-full bg-muda-green mt-2 flex-shrink-0" />
                                         <span>{item}</span>
                                     </li>
@@ -98,22 +84,21 @@ export function SecurityCompliance(): React.ReactElement {
                         </Card>
                     </motion.div>
 
-                    {/* Não Fazemos — red left border */}
+                    {/* Não Fazemos */}
                     <motion.div
-                        initial={{ opacity: 0, x: 30 }}
+                        initial={{ opacity: 0, x: 15 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.5, delay: 0.4 }}
+                        transition={{ duration: 0.4, delay: 0.2 }}
                     >
-                        <Card className="p-8 h-full bg-white/5 border-white/10 backdrop-blur-md border-l-4 border-l-muda-red rounded-2xl relative overflow-hidden">
-                            <div className="absolute top-0 right-0 w-32 h-32 bg-muda-red/10 rounded-full blur-[50px] mix-blend-screen pointer-events-none" />
-                            <h3 className="text-xl font-sora font-semibold text-muda-red mb-6 flex items-center gap-3">
-                                <XCircle className="w-6 h-6 text-muda-red" />
+                        <Card className="p-6 sm:p-8 h-full bg-card border border-border border-l-4 border-l-muda-red rounded-2xl shadow-sm">
+                            <h3 className="text-lg font-serif font-bold text-muda-red mb-5 flex items-center gap-2.5">
+                                <XCircle className="w-5 h-5 text-muda-red" />
                                 Não Fazemos
                             </h3>
-                            <ul className="space-y-4">
+                            <ul className="space-y-4 text-sm text-muted-foreground">
                                 {dontList.map((item, idx) => (
-                                    <li key={idx} className="flex items-start gap-3 text-white/80">
+                                    <li key={idx} className="flex items-start gap-2.5">
                                         <span className="w-1.5 h-1.5 rounded-full bg-muda-red mt-2 flex-shrink-0" />
                                         <span>{item}</span>
                                     </li>
@@ -123,16 +108,16 @@ export function SecurityCompliance(): React.ReactElement {
                     </motion.div>
                 </div>
 
-                {/* FATCA/OCDE final statement */}
+                {/* FATCA/OCDE Statement */}
                 <motion.div
-                    initial={{ opacity: 0, y: 16 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: 0.5 }}
+                    transition={{ duration: 0.4, delay: 0.3 }}
                     className="mt-10 text-center px-4"
                 >
-                    <p className="text-sm text-white/40 max-w-2xl mx-auto leading-relaxed tracking-wide">
-                        <span className="text-white/60 font-semibold">MUDA PARAGUAI</span> adota o padrão FATCA/OCDE de transparência. Todas as operações são declaradas às autoridades competentes de ambos os países.
+                    <p className="text-xs text-muted-foreground/80 max-w-xl mx-auto leading-relaxed">
+                        A <span className="text-foreground/90 font-semibold">Muda Paraguai</span> atua sob os padrões FATCA/OCDE de transparência. Toda transferência e reorganização de ativos é executada em estrita conformidade contábil e declaratória.
                     </p>
                 </motion.div>
 

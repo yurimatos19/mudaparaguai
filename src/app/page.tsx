@@ -10,6 +10,7 @@ const TechDemos = dynamic(() => import('@/components/home/tech-demos').then(mod 
 const SecurityCompliance = dynamic(() => import('@/components/home/security-compliance').then(mod => mod.SecurityCompliance), { ssr: true });
 const WhoWeAre = dynamic(() => import('@/components/home/who-we-are').then(mod => mod.WhoWeAre), { ssr: true });
 const FAQSection = dynamic(() => import('@/components/home/faq-section').then(mod => mod.FAQSection), { ssr: true });
+const TestimonialsSection = dynamic(() => import('@/components/home/testimonials').then(mod => mod.TestimonialsSection), { ssr: true });
 const CTASection = dynamic(() => import('@/components/home/cta-section').then(mod => mod.CTASection), { ssr: true });
 
 export default function Home(): React.ReactElement {
@@ -25,6 +26,7 @@ export default function Home(): React.ReactElement {
       <SecurityCompliance />
       <WhoWeAre />
       <FAQSection />
+      <TestimonialsSection />
       <CTASection />
     </div>
   );

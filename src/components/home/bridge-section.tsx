@@ -2,160 +2,153 @@
 
 import { motion } from "framer-motion";
 import { ShieldCheck, FileText, Building2, ArrowRight } from "lucide-react";
+import { BrazilFlag, ParaguayFlag } from "@/components/ui/svg-flags";
 
 const pillars = [
-    {
-        icon: FileText,
-        label: "Diagnóstico & Estratégia",
-        color: "muda-green",
-    },
-    {
-        icon: Building2,
-        label: "Execução & Registros",
-        color: "muda-yellow",
-    },
-    {
-        icon: ShieldCheck,
-        label: "Compliance Contínuo",
-        color: "muda-blue",
-    },
+    { icon: FileText, label: "1. Diagnóstico Estratégico" },
+    { icon: Building2, label: "2. Execução & Registros" },
+    { icon: ShieldCheck, label: "3. Compliance Contínuo" },
 ];
 
 export function BridgeSection(): React.ReactElement {
     return (
         <section className="py-24 lg:py-32 bg-background relative overflow-hidden isolate">
+            {/* Background Orbs to bring it to life */}
+            <div className="absolute top-1/4 -left-32 w-[600px] h-[600px] bg-muda-green/10 rounded-full blur-[100px] pointer-events-none mix-blend-multiply" />
+            <div className="absolute bottom-1/4 -right-32 w-[600px] h-[600px] bg-muda-red/10 rounded-full blur-[100px] pointer-events-none mix-blend-multiply" />
 
-
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="max-w-4xl mx-auto text-center mb-16 lg:mb-24">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div className="max-w-4xl mx-auto text-center mb-16 lg:mb-20">
                     <motion.h2
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 15 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
-                        className="text-4xl sm:text-5xl lg:text-5xl font-sora font-semibold text-white tracking-tighter mb-6 leading-tight"
+                        transition={{ duration: 0.5 }}
+                        className="text-3xl sm:text-4xl lg:text-5xl font-serif font-normal text-foreground tracking-tight mb-6 leading-tight"
                     >
-                        A ponte não é emoção. <br className="hidden sm:block" />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-muda-green via-muda-yellow to-muda-blue">É engenharia jurídica + execução.</span>
+                        A transição não é improviso. <br className="hidden sm:block" />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-muda-blue to-muda-red font-bold">É engenharia jurídica e governança entre nações.</span>
                     </motion.h2>
 
                     <motion.p
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 15 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.6, delay: 0.2 }}
-                        className="text-lg sm:text-xl text-foreground/70 leading-relaxed max-w-3xl mx-auto tracking-tight"
+                        transition={{ duration: 0.5, delay: 0.1 }}
+                        className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto"
                     >
-                        Quando o ambiente fica imprevisível, o caminho não é improviso. É estratégia, governança e documentação. A <strong className="font-semibold text-white">MUDA PARAGUAI</strong> conduz uma jornada assistida para estruturar, executar e operar com padrão auditável.
+                        Diante de um cenário fiscal dinâmico, a conformidade binacional é a chave. A Muda Paraguai conduz uma jornada estruturada para planejar, executar e manter sua nova operação em total regularidade.
                     </motion.p>
                 </div>
 
-                {/* Bridge Visualization */}
+                {/* Bridge Visualization Container (Glassmorphic) */}
                 <motion.div
-                    initial={{ opacity: 0, scale: 0.95, y: 30 }}
-                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.8, delay: 0.3 }}
-                    className="max-w-5xl mx-auto"
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    className="max-w-4xl mx-auto relative group"
                 >
-                    {/* Backdrop glow */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-muda-green/20 via-muda-yellow/10 to-muda-blue/20 blur-3xl opacity-40 pointer-events-none rounded-[3rem]" />
+                    {/* Pulsing glow behind the card */}
+                    <div className="absolute -inset-1 bg-gradient-to-r from-muda-green via-muda-yellow to-muda-red rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-1000 group-hover:duration-200" />
+                    
+                    <div className="relative bg-white/80 backdrop-blur-2xl border border-white rounded-3xl p-8 sm:p-12 shadow-2xl overflow-hidden">
+                        {/* Subtle decorative background in the card */}
+                        <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] opacity-30" />
 
-                    <div className="relative bg-[#040C18]/90 backdrop-blur-3xl border border-white/10 rounded-[2.5rem] p-8 sm:p-12 overflow-hidden shadow-2xl shadow-black/40 ring-1 ring-white/5">
-                        {/* Shimmer overlay */}
-                        <div className="absolute inset-0 bg-gradient-to-tr from-muda-green/5 via-transparent to-muda-blue/5 pointer-events-none" />
-
-                        {/* Top: Brasil → Paraguai */}
-                        <div className="relative flex items-center justify-between mb-10 sm:mb-14">
+                        {/* Top: Brasil → Paraguai flow */}
+                        <div className="relative flex items-center justify-between mb-12 sm:mb-16 z-10">
                             {/* Brasil Side */}
                             <motion.div
-                                initial={{ opacity: 0, x: -20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
-                                transition={{ delay: 0.5 }}
-                                className="flex flex-col items-center gap-3"
+                                transition={{ type: "spring", bounce: 0.4, delay: 0.3 }}
+                                className="flex flex-col items-center gap-3 z-10"
                             >
-                                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-muda-green/10 border border-muda-green/30 flex items-center justify-center shadow-lg shadow-muda-green/10">
-                                    <span className="text-2xl">🇧🇷</span>
+                                <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-white border-2 border-border flex items-center justify-center shadow-lg relative overflow-hidden group-hover:border-muda-green/30 transition-colors">
+                                    <div className="absolute inset-0 bg-gradient-to-br from-muda-green/10 to-transparent" />
+                                    <BrazilFlag width={44} height={31} />
                                 </div>
                                 <div className="text-center">
-                                    <p className="font-sora font-bold text-white text-base sm:text-lg">Brasil</p>
-                                    <p className="text-xs text-muda-red/80 font-medium mt-0.5">27–34% de carga</p>
+                                    <p className="font-serif font-bold text-foreground text-lg">Brasil</p>
+                                    <p className="text-[10px] sm:text-xs text-muda-red font-bold uppercase tracking-widest mt-1">27% a 34% de carga</p>
                                 </div>
                             </motion.div>
 
-                            {/* Bridge Center */}
-                            <div className="flex-1 mx-4 sm:mx-8 relative">
+                            {/* Bridge Flow Line */}
+                            <div className="flex-1 mx-6 sm:mx-12 relative">
                                 {/* Static track */}
-                                <div className="w-full h-0.5 bg-white/10 rounded-full absolute top-1/2 -translate-y-1/2" />
+                                <div className="w-full h-1 bg-secondary rounded-full absolute top-1/2 -translate-y-1/2 overflow-hidden shadow-inner" />
 
-                                {/* Animated flow */}
+                                {/* Animated flow (transitions colors) */}
                                 <motion.div
-                                    className="absolute top-1/2 -translate-y-1/2 left-0 h-0.5 bg-gradient-to-r from-muda-green via-muda-yellow to-muda-blue rounded-full"
+                                    className="absolute top-1/2 -translate-y-1/2 left-0 h-1 rounded-full bg-gradient-to-r from-muda-green via-muda-yellow to-muda-red"
                                     initial={{ width: "0%" }}
                                     whileInView={{ width: "100%" }}
                                     viewport={{ once: true }}
-                                    transition={{ duration: 1.5, delay: 0.7, ease: "easeInOut" }}
+                                    transition={{ duration: 1.5, delay: 0.5, ease: "easeInOut" }}
                                 />
 
-                                {/* Arrow */}
-                                <motion.div
-                                    className="absolute top-1/2 -translate-y-1/2 right-0"
-                                    initial={{ opacity: 0, x: -10 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ delay: 2.2 }}
-                                >
-                                    <ArrowRight className="w-4 h-4 text-muda-blue" />
-                                </motion.div>
+                                {/* Arrow markers running */}
+                                <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 h-4 overflow-hidden pointer-events-none flex items-center justify-between px-4">
+                                    <motion.div 
+                                        className="text-muda-blue/30"
+                                        animate={{ x: [0, 20, 0] }}
+                                        transition={{ repeat: Infinity, duration: 2, ease: "linear" }}
+                                    >
+                                        <ArrowRight className="w-4 h-4" />
+                                    </motion.div>
+                                </div>
 
                                 {/* Center Label */}
-                                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-5">
+                                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-7">
                                     <motion.span
                                         initial={{ opacity: 0, y: 5 }}
                                         whileInView={{ opacity: 1, y: 0 }}
                                         viewport={{ once: true }}
-                                        transition={{ delay: 1.5 }}
-                                        className="text-[10px] sm:text-xs font-bold text-foreground/40 uppercase tracking-[0.15em] whitespace-nowrap mt-3 block text-center"
+                                        transition={{ delay: 1.2 }}
+                                        className="text-[10px] sm:text-xs font-bold text-muted-foreground uppercase tracking-[0.2em] whitespace-nowrap bg-white/80 backdrop-blur-sm px-3 py-1 rounded-full shadow-sm border border-border"
                                     >
-                                        Transição Auditável
+                                        Transição Binacional
                                     </motion.span>
                                 </div>
                             </div>
 
                             {/* Paraguai Side */}
                             <motion.div
-                                initial={{ opacity: 0, x: 20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
-                                transition={{ delay: 0.5 }}
-                                className="flex flex-col items-center gap-3"
+                                transition={{ type: "spring", bounce: 0.4, delay: 0.6 }}
+                                className="flex flex-col items-center gap-3 z-10"
                             >
-                                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-muda-blue/10 border border-muda-blue/30 flex items-center justify-center shadow-lg shadow-muda-blue/10">
-                                    <span className="text-2xl">🇵🇾</span>
+                                <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-white border-2 border-border flex items-center justify-center shadow-lg relative overflow-hidden group-hover:border-muda-blue/30 transition-colors">
+                                    <div className="absolute inset-0 bg-gradient-to-br from-muda-red/10 to-transparent" />
+                                    <ParaguayFlag width={44} height={31} />
                                 </div>
                                 <div className="text-center">
-                                    <p className="font-sora font-bold text-white text-base sm:text-lg">Paraguai</p>
-                                    <p className="text-xs text-muda-green/80 font-medium mt-0.5">1–10% de carga</p>
+                                    <p className="font-serif font-bold text-foreground text-lg">Paraguai</p>
+                                    <p className="text-[10px] sm:text-xs text-muda-green font-bold uppercase tracking-widest mt-1">1% a 10% de carga</p>
                                 </div>
                             </motion.div>
                         </div>
 
-                        {/* Bottom: 3 Pillars */}
-                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6 pt-8 border-t border-white/10">
+                        {/* Bottom: 3 Pillars with vibrant hover effects */}
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-8 border-t border-border z-10 relative">
                             {pillars.map((pillar, i) => (
                                 <motion.div
                                     key={pillar.label}
-                                    initial={{ opacity: 0, y: 20 }}
+                                    initial={{ opacity: 0, y: 10 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
-                                    transition={{ delay: 0.8 + i * 0.15 }}
-                                    className={`flex items-center gap-3 p-4 rounded-xl bg-${pillar.color}/5 border border-${pillar.color}/15 group hover:bg-${pillar.color}/10 transition-colors duration-300`}
+                                    transition={{ delay: 0.8 + i * 0.1 }}
+                                    className="flex items-center gap-3 p-4 rounded-2xl bg-white border border-border shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group/pillar"
                                 >
-                                    <div className={`w-9 h-9 rounded-lg bg-${pillar.color}/10 flex items-center justify-center flex-shrink-0`}>
-                                        <pillar.icon className={`w-4 h-4 text-${pillar.color}`} />
+                                    <div className="w-10 h-10 rounded-xl bg-secondary border border-border flex items-center justify-center flex-shrink-0 group-hover/pillar:bg-muda-blue group-hover/pillar:border-muda-blue transition-colors duration-300">
+                                        <pillar.icon className="w-5 h-5 text-primary group-hover/pillar:text-white transition-colors duration-300" />
                                     </div>
-                                    <p className="text-sm font-semibold text-white/80">{pillar.label}</p>
+                                    <p className="text-xs sm:text-sm font-bold text-foreground/80">{pillar.label}</p>
                                 </motion.div>
                             ))}
                         </div>

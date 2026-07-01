@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ShieldCheck, Mail, MapPin, MessageCircle, Instagram, Linkedin } from "lucide-react";
+import { BrazilFlag, ParaguayFlag } from "@/components/ui/svg-flags";
 
 const socialLinks = [
     {
@@ -25,16 +26,16 @@ const socialLinks = [
 
 export function Footer(): React.ReactElement {
     return (
-        <footer className="bg-muda-navy text-muda-offwhite border-t border-white/10">
+        <footer className="bg-muda-navy text-muda-offwhite border-t border-white/5 font-sans">
             {/* Top strip — CTA hint */}
-            <div className="border-b border-white/10 py-5">
+            <div className="border-b border-white/5 py-6">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-                    <p className="text-sm text-white/60 font-medium">
+                    <p className="text-sm text-white/70 font-medium">
                         Pronto para estruturar sua operação no Paraguai?
                     </p>
                     <Link
                         href="/diagnostico"
-                        className="text-sm font-semibold text-muda-green hover:text-white transition-colors flex items-center gap-1.5 group"
+                        className="text-sm font-semibold text-muda-yellow hover:text-white transition-colors flex items-center gap-1.5 group"
                     >
                         Começar diagnóstico grátis
                         <span className="group-hover:translate-x-1 transition-transform inline-block">→</span>
@@ -47,19 +48,26 @@ export function Footer(): React.ReactElement {
 
                     {/* Brand Column */}
                     <div className="space-y-6">
-                        <Link href="/" className="inline-block">
-                            <Image
-                                src="/logo.png"
-                                alt="Muda Paraguai Logo"
-                                width={160}
-                                height={48}
-                                className="object-contain"
-                            />
-                        </Link>
+                        <div className="flex items-center gap-3">
+                            <Link href="/" className="inline-block">
+                                <Image
+                                    src="/logo.png"
+                                    alt="Muda Paraguai Logo"
+                                    width={150}
+                                    height={44}
+                                    className="object-contain"
+                                />
+                            </Link>
+                            <div className="flex items-center gap-1.5 bg-white/5 border border-white/10 px-2 py-0.5 rounded-md">
+                                <BrazilFlag width={16} height={11} />
+                                <span className="text-[9px] font-bold text-white/40">➔</span>
+                                <ParaguayFlag width={16} height={11} />
+                            </div>
+                        </div>
                         <p className="text-white/60 text-sm max-w-xs leading-relaxed">
                             Do Brasil ao Paraguai — com segurança jurídica, governança e operação 100% rastreável.
                         </p>
-                        <div className="flex items-center gap-2 text-muda-green/90 bg-muda-green/10 w-fit px-3 py-1.5 rounded-lg border border-muda-green/20">
+                        <div className="flex items-center gap-2 text-muda-yellow bg-muda-yellow/10 w-fit px-3 py-1.5 rounded-lg border border-muda-yellow/20">
                             <ShieldCheck className="w-4 h-4" />
                             <span className="text-xs font-semibold tracking-wide uppercase">Compliance-first</span>
                         </div>
@@ -83,7 +91,7 @@ export function Footer(): React.ReactElement {
 
                     {/* Platform Links */}
                     <div className="space-y-4">
-                        <h4 className="font-sora font-semibold text-white tracking-wide text-sm">Plataforma</h4>
+                        <h4 className="font-heading font-semibold text-white tracking-wide text-sm">Plataforma</h4>
                         <ul className="space-y-3 text-sm text-white/60">
                             <li><Link href="/#como-funciona" className="hover:text-white transition-colors">Como funciona</Link></li>
                             <li><Link href="/#para-quem" className="hover:text-white transition-colors">Para quem é</Link></li>
@@ -96,7 +104,7 @@ export function Footer(): React.ReactElement {
 
                     {/* Legal Links */}
                     <div className="space-y-4">
-                        <h4 className="font-sora font-semibold text-white tracking-wide text-sm">Legal</h4>
+                        <h4 className="font-heading font-semibold text-white tracking-wide text-sm">Legal</h4>
                         <ul className="space-y-3 text-sm text-white/60">
                             <li><Link href="/privacidade" className="hover:text-white transition-colors">Política de Privacidade</Link></li>
                             <li><Link href="/termos" className="hover:text-white transition-colors">Termos de Uso</Link></li>
@@ -111,27 +119,27 @@ export function Footer(): React.ReactElement {
 
                     {/* Contact */}
                     <div className="space-y-4">
-                        <h4 className="font-sora font-semibold text-white tracking-wide text-sm">Contato</h4>
+                        <h4 className="font-heading font-semibold text-white tracking-wide text-sm">Contato</h4>
                         <ul className="space-y-4 text-sm text-white/60">
                             <li>
                                 <Link
                                     href="mailto:contato@mudaparaguai.com"
                                     className="flex items-start gap-3 hover:text-white transition-colors group"
                                 >
-                                    <Mail className="w-4 h-4 mt-0.5 text-white/40 group-hover:text-muda-green transition-colors flex-shrink-0" />
+                                    <Mail className="w-4 h-4 mt-0.5 text-white/40 group-hover:text-muda-yellow transition-colors flex-shrink-0" />
                                     <span>contato@mudaparaguai.com</span>
                                 </Link>
                             </li>
                             <li className="flex items-start gap-3">
                                 <MapPin className="w-4 h-4 mt-0.5 text-white/40 flex-shrink-0" />
-                                <span>Assunção, Paraguai<br />São Paulo, Brasil</span>
+                                <span>Recife, Brasil<br />Rua Capitão José da Luz, 58, Sala 203</span>
                             </li>
                             <li>
                                 <Link
                                     href="https://wa.me/5581992992676?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20a%20Muda%20Paraguai."
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center gap-2 text-muda-green/80 hover:text-muda-green transition-colors font-medium group"
+                                    className="flex items-center gap-2 text-muda-yellow/80 hover:text-muda-yellow transition-colors font-medium group"
                                 >
                                     <MessageCircle className="w-4 h-4 group-hover:scale-110 transition-transform" />
                                     Falar no WhatsApp
@@ -142,7 +150,7 @@ export function Footer(): React.ReactElement {
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/40">
+                <div className="mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/45">
                     <p>© {new Date().getFullYear()} Muda Paraguai. Todos os direitos reservados.</p>
                     <p className="text-center md:text-right max-w-sm">
                         Site informativo. Nenhuma informação aqui constitui promessa de resultado tributário ou jurídico.

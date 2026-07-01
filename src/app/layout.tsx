@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import { Sora, Inter } from "next/font/google";
+import { Lora, Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 
-const sora = Sora({
-  variable: "--font-sora",
+const lora = Lora({
+  variable: "--font-lora",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 const inter = Inter({
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Muda Paraguai | Expansão Sem Limites para Negócios",
-    description: "Estruturamos sua operação no Paraguai com carga tributária mínima (1-10%). Crescimento com segurança jurídica.",
+    description: "Estruturamos sua operação no Paraguai with carga tributária mínima (1-10%). Crescimento com segurança jurídica.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -58,6 +59,8 @@ export const metadata: Metadata = {
     },
   },
 };
+
+import { WhatsAppButton } from "@/components/ui/whatsapp-button";
 
 export default function RootLayout({
   children,
@@ -85,7 +88,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="pt-BR" className="scroll-smooth dark">
+    <html lang="pt-BR" className="scroll-smooth">
       <head>
         <script
           type="application/ld+json"
@@ -93,12 +96,13 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${sora.variable} ${inter.variable} font-sans antialiased text-foreground bg-background min-h-screen flex flex-col`}
+        className={`${lora.variable} ${inter.variable} font-sans antialiased text-foreground bg-background min-h-screen flex flex-col`}
       >
         <Header />
         <main className="flex-grow pt-24">
           {children}
         </main>
+        <WhatsAppButton />
         <Footer />
       </body>
     </html>

@@ -5,22 +5,30 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --color-muda-navy: #061121;
-  /* Deeper, richer Navy for more contrast */
-  --color-muda-offwhite: #F8F9FB;
-  /* Cleaner off-white */
-  --color-muda-green: #147A31;
-  /* More refined green */
-  --color-muda-yellow: #E5B200;
-  /* Richer golden yellow */
-  --color-muda-red: #C62828;
-  /* Deeper crimson red */
-  --color-muda-blue: #154593;
-  /* More saturated royal blue */
+  --color-muda-navy: #0F1E2E;
+  /* Deep Midnight Navy for high-contrast block sections */
+  --color-muda-offwhite: #F4F5F6;
+  /* Light cool gray background */
+  --color-muda-green: #008238;
+  /* Official Brazil Green */
+  --color-muda-yellow: #FFC72C;
+  /* Official Brazil Gold */
+  --color-muda-red: #D52B1E;
+  /* Official Paraguay Red */
+  --color-muda-blue: #0038A8;
+  /* Official Paraguay Blue */
+  
+  --color-brazil-green: #008238;
+  --color-brazil-yellow: #FFC72C;
+  --color-brazil-blue: #002F6C;
+  --color-paraguay-red: #D52B1E;
+  --color-paraguay-blue: #0038A8;
+  --color-paraguay-white: #FFFFFF;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-inter), sans-serif;
-  --font-heading: var(--font-sora), sans-serif;
+  --font-heading: var(--font-lora), serif;
+  --font-serif: var(--font-lora), serif;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -60,25 +68,25 @@
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: #061121;
-  --foreground: #F8F9FB;
-  --card: #0B1F3A;
-  --card-foreground: #F8F9FB;
-  --popover: #0B1F3A;
-  --popover-foreground: #F8F9FB;
-  --primary: #F8F9FB;
-  --primary-foreground: #061121;
-  --secondary: #1E3A5F;
-  --secondary-foreground: #F8F9FB;
-  --muted: #11284A;
-  --muted-foreground: #94A3B8;
-  --accent: #1E3A5F;
-  --accent-foreground: #F8F9FB;
-  --destructive: #C62828;
-  --border: #1E3A5F;
-  --input: #1E3A5F;
-  --ring: #147A31;
+  --radius: 0.75rem;
+  --background: #FFFFFF;
+  --foreground: #020617;
+  --card: rgba(255, 255, 255, 0.6);
+  --card-foreground: #020617;
+  --popover: rgba(255, 255, 255, 0.9);
+  --popover-foreground: #020617;
+  --primary: #002776; /* Vivid Brazil Blue */
+  --primary-foreground: #FFFFFF;
+  --secondary: #F8FAFC;
+  --secondary-foreground: #0F172A;
+  --muted: #F1F5F9;
+  --muted-foreground: #64748B;
+  --accent: #FFDF00; /* Vivid Brazil Yellow */
+  --accent-foreground: #0F172A;
+  --destructive: #D52B1E; /* Vivid Paraguay Red */
+  --border: rgba(226, 232, 240, 0.6);
+  --input: #E2E8F0;
+  --ring: #009B3A; /* Vivid Brazil Green */
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -95,24 +103,24 @@
 }
 
 .dark {
-  --background: #061121;
-  --foreground: #F8F9FB;
-  --card: #0B1F3A;
-  --card-foreground: #F8F9FB;
-  --popover: #0B1F3A;
-  --popover-foreground: #F8F9FB;
-  --primary: #F8F9FB;
-  --primary-foreground: #061121;
-  --secondary: #1E3A5F;
-  --secondary-foreground: #F8F9FB;
-  --muted: #11284A;
+  --background: #020617;
+  --foreground: #F8FAFC;
+  --card: rgba(15, 23, 42, 0.6);
+  --card-foreground: #F8FAFC;
+  --popover: rgba(15, 23, 42, 0.9);
+  --popover-foreground: #F8FAFC;
+  --primary: #FFDF00; /* Pop in dark mode */
+  --primary-foreground: #020617;
+  --secondary: #1E293B;
+  --secondary-foreground: #F8FAFC;
+  --muted: #1E293B;
   --muted-foreground: #94A3B8;
-  --accent: #1E3A5F;
-  --accent-foreground: #F8F9FB;
-  --destructive: #C62828;
-  --border: #1E3A5F;
-  --input: #1E3A5F;
-  --ring: #147A31;
+  --accent: #009B3A;
+  --accent-foreground: #F8FAFC;
+  --destructive: #EF4444;
+  --border: rgba(30, 41, 59, 0.6);
+  --input: #1E293B;
+  --ring: #FFDF00;
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);

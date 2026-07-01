@@ -8,6 +8,8 @@ import { MessageCircle, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 
+import { BrazilFlag, ParaguayFlag } from "@/components/ui/svg-flags";
+
 const navLinks = [
     { label: "Como funciona", href: "/#como-funciona", isAnchor: true, anchorId: "como-funciona" },
     { label: "Para quem", href: "/#para-quem", isAnchor: true, anchorId: "para-quem" },
@@ -45,21 +47,28 @@ export function Header(): React.ReactElement {
                 className={cn(
                     "fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out",
                     isScrolled
-                        ? "h-16 bg-muda-navy/95 backdrop-blur-md border-b border-white/10 shadow-xl shadow-black/30"
+                        ? "h-16 bg-background/85 backdrop-blur-md border-b border-border/80 shadow-[0_2px_20px_-10px_rgba(0,0,0,0.05)]"
                         : "h-24 bg-transparent border-b border-transparent"
                 )}
             >
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-between">
-                    {/* Logo */}
-                    <Link href="/" className="flex items-center gap-2 relative z-10">
-                        <Image
-                            src="/logo.png"
-                            alt="Muda Paraguai Logo"
-                            width={isScrolled ? 160 : 200}
-                            height={isScrolled ? 44 : 56}
-                            className="object-contain transition-all duration-300"
-                        />
-                    </Link>
+                    {/* Logo & Patriotic Badges */}
+                    <div className="flex items-center gap-3 relative z-10">
+                        <Link href="/">
+                            <Image
+                                src="/logo.png"
+                                alt="Muda Paraguai Logo"
+                                width={isScrolled ? 150 : 185}
+                                height={isScrolled ? 40 : 50}
+                                className="object-contain transition-all duration-300"
+                            />
+                        </Link>
+                        <div className="hidden lg:flex items-center gap-1 bg-secondary/80 border border-border px-2 py-0.5 rounded-md shadow-sm">
+                            <BrazilFlag width={16} height={11} />
+                            <span className="text-[9px] font-bold text-muted-foreground">➔</span>
+                            <ParaguayFlag width={16} height={11} />
+                        </div>
+                    </div>
 
                     {/* Desktop Nav */}
                     <nav className="hidden md:flex items-center gap-1">
@@ -69,7 +78,7 @@ export function Header(): React.ReactElement {
                                     key={link.label}
                                     href={link.href}
                                     onClick={(e) => scrollToSection(e, link.anchorId!)}
-                                    className="px-4 py-2 text-sm font-medium text-white/70 hover:text-white rounded-lg hover:bg-white/5 transition-all duration-200"
+                                    className="px-4 py-2 text-sm font-semibold text-foreground/75 hover:text-primary rounded-lg hover:bg-secondary transition-all duration-200"
                                 >
                                     {link.label}
                                 </Link>
@@ -77,7 +86,7 @@ export function Header(): React.ReactElement {
                                 <Link
                                     key={link.label}
                                     href={link.href}
-                                    className="px-4 py-2 text-sm font-medium text-white/70 hover:text-white rounded-lg hover:bg-white/5 transition-all duration-200"
+                                    className="px-4 py-2 text-sm font-semibold text-foreground/75 hover:text-primary rounded-lg hover:bg-secondary transition-all duration-200"
                                 >
                                     {link.label}
                                 </Link>
@@ -91,7 +100,7 @@ export function Header(): React.ReactElement {
                             variant="ghost"
                             size="sm"
                             asChild
-                            className="text-white/70 hover:text-white hover:bg-white/10 border border-white/10"
+                            className="text-foreground/80 hover:text-primary hover:bg-secondary border border-border/60"
                         >
                             <Link href="https://wa.me/5581992992676?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20a%20Muda%20Paraguai.">
                                 <MessageCircle className="w-4 h-4 mr-2 text-muda-green" />
@@ -100,7 +109,7 @@ export function Header(): React.ReactElement {
                         </Button>
                         <Button
                             size="sm"
-                            className="bg-gradient-to-r from-muda-green to-muda-blue text-white hover:opacity-90 shadow-lg shadow-muda-green/20 border border-muda-yellow/20 font-semibold"
+                            className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-sm border border-accent/20 font-semibold transition-all duration-200"
                             asChild
                         >
                             <Link href="/diagnostico">Começar diagnóstico</Link>
@@ -109,7 +118,7 @@ export function Header(): React.ReactElement {
 
                     {/* Mobile Hamburger */}
                     <button
-                        className="md:hidden p-2 rounded-lg text-white/80 hover:bg-white/10 transition-colors"
+                        className="md:hidden p-2 rounded-lg text-foreground/80 hover:bg-secondary transition-colors"
                         onClick={() => setMobileOpen((v) => !v)}
                         aria-label="Abrir menu"
                     >
@@ -126,7 +135,7 @@ export function Header(): React.ReactElement {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
                         transition={{ duration: 0.2 }}
-                        className="fixed inset-0 z-40 bg-muda-navy/98 backdrop-blur-xl pt-24 px-6 flex flex-col md:hidden"
+                        className="fixed inset-0 z-40 bg-background/98 backdrop-blur-xl pt-24 px-6 flex flex-col md:hidden"
                     >
                         <nav className="flex flex-col gap-1 mt-4">
                             {navLinks.map((link) =>
@@ -135,7 +144,7 @@ export function Header(): React.ReactElement {
                                         key={link.label}
                                         href={link.href}
                                         onClick={(e) => scrollToSection(e, link.anchorId!)}
-                                        className="px-4 py-4 text-lg font-medium text-white/80 hover:text-white border-b border-white/10 hover:pl-6 transition-all duration-200"
+                                        className="px-4 py-4 text-lg font-semibold text-foreground/80 hover:text-primary border-b border-border hover:pl-6 transition-all duration-200"
                                     >
                                         {link.label}
                                     </Link>
@@ -144,7 +153,7 @@ export function Header(): React.ReactElement {
                                         key={link.label}
                                         href={link.href}
                                         onClick={() => setMobileOpen(false)}
-                                        className="px-4 py-4 text-lg font-medium text-white/80 hover:text-white border-b border-white/10 hover:pl-6 transition-all duration-200"
+                                        className="px-4 py-4 text-lg font-semibold text-foreground/80 hover:text-primary border-b border-border hover:pl-6 transition-all duration-200"
                                     >
                                         {link.label}
                                     </Link>
@@ -157,7 +166,7 @@ export function Header(): React.ReactElement {
                                 variant="outline"
                                 size="lg"
                                 asChild
-                                className="w-full border-white/20 text-white hover:bg-white/10 bg-transparent"
+                                className="w-full border-border text-foreground hover:bg-secondary bg-transparent"
                             >
                                 <Link href="https://wa.me/5581992992676?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20a%20Muda%20Paraguai." onClick={() => setMobileOpen(false)}>
                                     <MessageCircle className="w-5 h-5 mr-2 text-muda-green" />
@@ -167,7 +176,7 @@ export function Header(): React.ReactElement {
                             <Button
                                 size="lg"
                                 asChild
-                                className="w-full bg-gradient-to-r from-muda-green to-muda-blue text-white font-bold shadow-lg"
+                                className="w-full bg-primary hover:bg-primary/95 text-primary-foreground font-bold shadow-md"
                             >
                                 <Link href="/diagnostico" onClick={() => setMobileOpen(false)}>
                                     Começar diagnóstico grátis

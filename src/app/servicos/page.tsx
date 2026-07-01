@@ -9,225 +9,241 @@ const plans = [
     {
         name: "Starter",
         badge: "Diagnóstico",
-        target: "Para quem precisa de clareza antes de qualquer movimento.",
+        target: "Para quem precisa de total clareza regulatória antes de dar qualquer passo societário.",
         includes: [
-            "Diagnóstico guiado e automatizado",
-            "Call de alinhamento estratégico",
-            "Desenho de roadmap inicial",
+            "Diagnóstico de elegibilidade assistido",
+            "Call de alinhamento estratégico com advogado",
+            "Desenho de roadmap de estruturação jurídica",
         ],
-        deliverables: "Relatório executivo + Checklist + Recomendação de trilha.",
-        limits: "Não inclui execução documental nem registros societários.",
-        cta: "Fazer diagnóstico agora",
+        deliverables: "Relatório executivo + Checklist documental personalizado.",
+        limits: "Não inclui elaboração de contratos sociais nem registros nos órgãos locais.",
+        cta: "Fazer diagnóstico gratuito",
         link: "/diagnostico",
         isExternal: false,
         highlight: false,
-        color: "muda-green",
-        borderGlow: "hover:border-muda-green/40 hover:shadow-muda-green/10",
-        badgeBg: "bg-muda-green/10 text-muda-green border-muda-green/20",
+        color: "text-muda-green",
+        bg: "from-muda-green/20 to-transparent",
+        border: "border-muda-green/30 hover:border-muda-green/60",
     },
     {
         name: "Business",
         badge: "Abertura",
-        target: "Para quem já validou o fit e quer estruturar a empresa legalmente.",
+        target: "Para quem já validou a aderência e quer constituir a estrutura societária e RUC.",
         includes: [
-            "Estrutura societária e tributária",
-            "Registros e elaboração de documentos",
-            "Emissão de RUC",
-            "Setup operacional inicial",
+            "Estruturação de contrato social e estatutos",
+            "Elaboração de atas societárias e registros locais",
+            "Emissão e homologação do RUC societário",
+            "Setup operacional e representação legal",
         ],
-        deliverables: "Kit societário + Trilha de decisões + Cronograma de execução.",
-        limits: "Não inclui a rotina contábil/fiscal mensal (veja o plano Scale).",
+        deliverables: "Kit societário completo + RUC + Chaves de acesso.",
+        limits: "Não inclui a rotina contábil e fiscal recorrente (veja o plano Scale).",
         cta: "Falar no WhatsApp",
         link: "https://wa.me/5581992992676?text=Olá,%20tenho%20interesse%20no%20plano%20Business%20da%20Muda%20Paraguai.",
         isExternal: true,
         highlight: true,
-        color: "muda-blue",
-        borderGlow: "hover:border-muda-blue/50 hover:shadow-muda-blue/10",
-        badgeBg: "bg-muda-blue/10 text-muda-blue border-muda-blue/20",
+        color: "text-muda-yellow",
+        bg: "from-muda-yellow/20 to-transparent",
+        border: "border-muda-yellow shadow-[0_0_30px_rgba(255,199,44,0.15)]",
     },
     {
         name: "Scale",
         badge: "Operação/Compliance",
-        target: "Para quem quer rodar 'limpo', estruturado e 100% auditável.",
+        target: "Para quem quer operar com substância econômica contínua e 100% livre de riscos.",
         includes: [
-            "Rotina contábil e fiscal completa",
-            "Gestão de compliance diário",
-            "Suporte consultivo contínuo",
-            "Relatórios periódicos",
+            "Rotina contábil mensal e obrigações paraguaias",
+            "Relatórios periódicos de compliance OCDE",
+            "Monitoramento contínuo de substância",
+            "Suporte societário e tributário contínuo",
         ],
-        deliverables: "Relatórios mensais de performance + Acesso ao Portal do Cliente.",
-        limits: "Depende do volume de transações mensais (faixas personalizadas).",
-        cta: "Avaliar elegibilidade",
+        deliverables: "Status mensal de regularidade + Acesso completo ao Portal.",
+        limits: "O valor recorrente varia de acordo com o volume de transações mensais.",
+        cta: "Fazer diagnóstico de compliance",
         link: "/diagnostico",
         isExternal: false,
         highlight: false,
-        color: "muda-yellow",
-        borderGlow: "hover:border-muda-yellow/40 hover:shadow-muda-yellow/10",
-        badgeBg: "bg-muda-yellow/10 text-muda-yellow border-muda-yellow/20",
+        color: "text-muda-blue",
+        bg: "from-muda-blue/20 to-transparent",
+        border: "border-muda-blue/30 hover:border-muda-blue/60",
     },
     {
         name: "Export / Industrial",
         badge: "Regime Maquila",
-        target: "Operações industriais/exportação com apetite forte por governança.",
+        target: "Operações industriais, agro ou exportações de alta escala focadas em benefícios fiscais.",
         includes: [
-            "Avaliação completa de elegibilidade",
-            "Desenho estratégico da trilha industrial",
-            "Execução assistida junto aos órgãos",
-            "Acompanhamento da operação",
+            "Análise profunda de elegibilidade no regime Maquila",
+            "Desenho operacional e de cadeia logística",
+            "Aprovação de projeto junto aos Ministérios locais",
+            "Habilitação tributária sob imposto único (1%)",
         ],
-        deliverables: "Plano de implantação integrado + Matriz de requisitos + Cronograma rígido.",
-        limits: "Estudo caso a caso. Não fazemos promessas automáticas de aprovação.",
-        cta: "Fazer diagnóstico Maquila",
+        deliverables: "Plano de implantação integrado + Matriz de requisitos + Projeto ministerial.",
+        limits: "Sujeito à análise prévia. Não realizamos promessas de aprovação automática.",
+        cta: "Avaliar elegibilidade Maquila",
         link: "/diagnostico",
         isExternal: false,
         highlight: false,
-        color: "muda-red",
-        borderGlow: "hover:border-muda-red/40 hover:shadow-muda-red/10",
-        badgeBg: "bg-muda-red/10 text-muda-red border-muda-red/20",
+        color: "text-muda-red",
+        bg: "from-muda-red/20 to-transparent",
+        border: "border-muda-red/30 hover:border-muda-red/60",
     },
 ];
 
 export default function ServicosPage(): React.ReactElement {
     return (
-        <div className="bg-background pt-32 pb-24 min-h-screen relative overflow-hidden">
-            {/* Background Orbs */}
-            <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-muda-green/5 rounded-full blur-[120px] pointer-events-none" />
-            <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-muda-blue/5 rounded-full blur-[100px] pointer-events-none" />
+        <div className="bg-muda-navy pt-28 pb-24 min-h-screen relative overflow-hidden text-white">
+            {/* Elegant patriotic glowing ambient blobs */}
+            <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-muda-blue/20 rounded-full blur-[150px] pointer-events-none mix-blend-screen" />
+            <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-muda-green/10 rounded-full blur-[120px] pointer-events-none mix-blend-screen" />
+
+            {/* Grid pattern background */}
+            <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:32px_32px] opacity-30 pointer-events-none" />
 
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
                 {/* Header */}
                 <motion.div
-                    initial={{ opacity: 0, y: 24 }}
+                    initial={{ opacity: 0, y: 15 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                    className="text-center max-w-3xl mx-auto mb-16 lg:mb-24"
+                    transition={{ duration: 0.5 }}
+                    className="text-center max-w-3xl mx-auto mb-20"
                 >
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-white/60 text-sm font-medium mb-6 backdrop-blur-sm">
+                    <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-white/10 bg-white/5 text-white/80 text-xs font-bold uppercase tracking-widest mb-6 backdrop-blur-sm">
                         <Star className="w-3.5 h-3.5 text-muda-yellow" />
-                        Jornada estruturada em etapas
+                        Jornada Sob Medida
                     </div>
-                    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-sora font-semibold text-white tracking-tighter mb-6 leading-tight">
-                        Jornada sob medida,{" "}
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-muda-green to-muda-blue">
-                            sem pacotes engessados.
+                    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-normal text-white tracking-tight mb-6">
+                        Etapas Estruturadas, <br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-muda-blue via-muda-green to-muda-yellow font-bold">
+                            sem pacotes genéricos.
                         </span>
                     </h1>
-                    <p className="text-lg text-foreground/60 leading-relaxed">
-                        Seja para validar um cenário, abrir a estrutura societária ou manter a operação 100% em compliance contínuo, a MUDA PARAGUAI oferece etapas lógicas e assistidas.
+                    <p className="text-base sm:text-lg text-white/70 leading-relaxed max-w-2xl mx-auto">
+                        Seja para validar seu enquadramento legal, registrar sua empresa ou terceirizar a rotina de compliance no Paraguai, oferecemos módulos claros e auditáveis para cada fase do seu negócio.
                     </p>
                 </motion.div>
 
                 {/* Plans Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
-                    {plans.map((plan, i) => (
-                        <motion.div
-                            key={plan.name}
-                            initial={{ opacity: 0, y: 30 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: i * 0.1 }}
-                            className={`relative flex flex-col rounded-[1.75rem] border transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl overflow-hidden
-                                ${plan.highlight
-                                    ? 'border-muda-blue/40 shadow-xl shadow-muda-blue/10 bg-[#0B1F3A]'
-                                    : `border-white/10 bg-card/60 ${plan.borderGlow}`
+                    {plans.map((plan, i) => {
+                        const isPrimaryCard = plan.highlight;
+                        return (
+                            <motion.div
+                                key={plan.name}
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, delay: i * 0.1 }}
+                                className={`relative flex flex-col rounded-[2rem] border transition-all duration-300 hover:-translate-y-2 overflow-hidden group ${
+                                    isPrimaryCard
+                                        ? `bg-white/10 backdrop-blur-xl ${plan.border}`
+                                        : `bg-white/5 backdrop-blur-lg ${plan.border}`
                                 }`}
-                        >
-                            {/* Highlight accent top bar */}
-                            {plan.highlight && (
-                                <>
-                                    <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-muda-green via-muda-blue to-muda-yellow" />
-                                    <div className="absolute top-3 right-3 flex items-center gap-1 bg-muda-blue/20 border border-muda-blue/30 text-muda-blue text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full">
-                                        <Star className="w-2.5 h-2.5" /> Popular
+                            >
+                                {/* Top colored gradient fade inside card */}
+                                <div className={`absolute top-0 left-0 right-0 h-32 bg-gradient-to-b ${plan.bg} opacity-50`} />
+
+                                {/* Popular badge */}
+                                {isPrimaryCard && (
+                                    <div className="absolute top-4 right-4 flex items-center gap-1.5 bg-muda-yellow text-muda-navy text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-lg z-20">
+                                        <Star className="w-3 h-3 fill-muda-navy" /> Recomendado
                                     </div>
-                                </>
-                            )}
+                                )}
 
-                            {/* Background Glow for highlight */}
-                            {plan.highlight && (
-                                <div className="absolute -top-20 -right-20 w-48 h-48 bg-muda-blue/10 rounded-full blur-3xl pointer-events-none" />
-                            )}
-
-                            <div className="p-8 flex flex-col flex-grow relative z-10">
-                                {/* Badge */}
-                                <div className={`inline-flex w-fit items-center px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-widest mb-5 border ${plan.badgeBg}`}>
-                                    {plan.badge}
-                                </div>
-
-                                <h3 className="text-2xl font-sora font-bold text-white mb-2">{plan.name}</h3>
-                                <p className="text-sm text-foreground/60 leading-relaxed mb-8 min-h-[48px]">
-                                    {plan.target}
-                                </p>
-
-                                {/* Includes */}
-                                <div className="flex-grow space-y-5">
-                                    <div>
-                                        <p className="text-xs font-semibold text-foreground/40 uppercase tracking-widest mb-3">Inclui:</p>
-                                        <ul className="space-y-2.5">
-                                            {plan.includes.map((item, j) => (
-                                                <li key={j} className="flex items-start gap-3 text-sm text-foreground/75">
-                                                    <div className={`mt-0.5 flex-shrink-0 w-4 h-4 rounded-full flex items-center justify-center bg-${plan.color}/15`}>
-                                                        <Check className={`w-2.5 h-2.5 text-${plan.color}`} />
-                                                    </div>
-                                                    <span>{item}</span>
-                                                </li>
-                                            ))}
-                                        </ul>
+                                <div className="p-8 flex flex-col flex-grow relative z-10">
+                                    {/* Badge */}
+                                    <div className={`inline-flex w-fit items-center px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest mb-6 border ${
+                                        isPrimaryCard
+                                            ? "bg-white/10 text-white border-white/20"
+                                            : "bg-white/5 text-white/60 border-white/10 group-hover:border-white/20"
+                                    }`}>
+                                        {plan.badge}
                                     </div>
 
-                                    {/* Deliverables & Limits */}
-                                    <div className="bg-white/5 border border-white/10 p-4 rounded-xl space-y-3 text-sm">
+                                    <h3 className={`text-2xl font-serif font-bold mb-2 text-white`}>
+                                        {plan.name}
+                                    </h3>
+                                    
+                                    <p className={`text-sm leading-relaxed mb-8 min-h-[60px] ${
+                                        isPrimaryCard ? "text-white/90" : "text-white/60"
+                                    }`}>
+                                        {plan.target}
+                                    </p>
+
+                                    {/* Includes List */}
+                                    <div className="flex-grow space-y-8">
                                         <div>
-                                            <span className="font-semibold text-white/80 mr-1">Você recebe:</span>
-                                            <span className="text-foreground/60">{plan.deliverables}</span>
+                                            <p className={`text-[10px] font-bold uppercase tracking-widest mb-4 ${plan.color}`}>
+                                                Estrutura do plano:
+                                            </p>
+                                            <ul className="space-y-4 text-sm">
+                                                {plan.includes.map((item, j) => (
+                                                    <li key={j} className="flex items-start gap-3">
+                                                        <div className={`mt-0.5 flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center border border-white/10 bg-white/5`}>
+                                                            <Check className={`w-3 h-3 ${plan.color}`} />
+                                                        </div>
+                                                        <span className="text-white/80 leading-relaxed">{item}</span>
+                                                    </li>
+                                                ))}
+                                            </ul>
                                         </div>
-                                        <div className="pt-2 border-t border-white/10">
-                                            <span className="font-semibold text-white/80 mr-1">Limites:</span>
-                                            <span className="text-foreground/50">{plan.limits}</span>
+
+                                        {/* Deliverables details block */}
+                                        <div className={`border p-5 rounded-2xl space-y-3 text-xs bg-black/20 border-white/10`}>
+                                            <div>
+                                                <span className={`font-bold mr-1 ${plan.color}`}>Você recebe:</span>
+                                                <span className="text-white/70 block mt-1 leading-relaxed">{plan.deliverables}</span>
+                                            </div>
+                                            <div className={`pt-3 border-t border-white/10`}>
+                                                <span className={`font-bold mr-1 ${plan.color}`}>Limites operacionais:</span>
+                                                <span className="text-white/50 block mt-1 leading-relaxed">{plan.limits}</span>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                {/* CTA */}
-                                <div className="mt-8 pt-6 border-t border-white/10">
-                                    <Button
-                                        asChild
-                                        className={`w-full h-12 font-semibold rounded-xl transition-all duration-200
-                                            ${plan.highlight
-                                                ? 'bg-gradient-to-r from-muda-green to-muda-blue text-white hover:opacity-90 shadow-lg shadow-muda-blue/20'
-                                                : 'bg-white/10 hover:bg-white/15 text-white border border-white/10'
+                                    {/* Action button */}
+                                    <div className="mt-8 pt-6 border-t border-white/10">
+                                        <Button
+                                            asChild
+                                            className={`w-full h-12 text-sm font-bold rounded-xl transition-all duration-300 ${
+                                                isPrimaryCard
+                                                    ? "bg-muda-yellow text-muda-navy hover:bg-white shadow-[0_0_20px_rgba(255,199,44,0.3)] hover:scale-[1.02]"
+                                                    : "bg-white/10 hover:bg-white/20 text-white border border-white/10 hover:border-white/30"
                                             }`}
-                                    >
-                                        <Link href={plan.link} target={plan.isExternal ? "_blank" : undefined} rel={plan.isExternal ? "noopener noreferrer" : undefined}>
-                                            {plan.isExternal && <MessageCircle className="mr-2 w-4 h-4" />}
-                                            {plan.cta}
-                                            {plan.highlight && <ArrowRight className="ml-2 w-4 h-4" />}
-                                        </Link>
-                                    </Button>
+                                        >
+                                            <Link href={plan.link} target={plan.isExternal ? "_blank" : undefined} rel={plan.isExternal ? "noopener noreferrer" : undefined}>
+                                                {plan.isExternal && <MessageCircle className="mr-2 w-4 h-4" />}
+                                                {plan.cta}
+                                                {!plan.isExternal && <ArrowRight className="ml-2 w-4 h-4" />}
+                                            </Link>
+                                        </Button>
+                                    </div>
                                 </div>
-                            </div>
-                        </motion.div>
-                    ))}
+                            </motion.div>
+                        );
+                    })}
                 </div>
 
-                {/* Bottom CTA */}
+                {/* Bottom CTA block */}
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 15 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.5 }}
-                    className="text-center mt-16 p-8 rounded-2xl border border-white/10 bg-white/5 max-w-2xl mx-auto"
+                    transition={{ duration: 0.5, delay: 0.4 }}
+                    className="mt-20 p-8 sm:p-12 rounded-[2rem] border border-white/10 bg-white/5 backdrop-blur-md max-w-2xl mx-auto shadow-xl text-center relative overflow-hidden"
                 >
-                    <p className="text-foreground/60 text-sm mb-4">
-                        Não sabe por onde começar? O diagnóstico é o primeiro passo — gratuito e leva menos de 3 minutos.
-                    </p>
-                    <Button
-                        size="lg"
-                        asChild
-                        className="bg-gradient-to-r from-muda-green to-muda-blue text-white h-14 px-8 rounded-xl font-semibold hover:opacity-90 shadow-lg shadow-muda-green/20"
-                    >
-                        <Link href="/diagnostico">
-                            Começar pelo diagnóstico gratuito
-                            <ArrowRight className="ml-2 w-5 h-5" />
-                        </Link>
-                    </Button>
+                    <div className="absolute inset-0 bg-gradient-to-r from-muda-green/10 via-transparent to-muda-blue/10 pointer-events-none" />
+                    <div className="relative z-10">
+                        <h3 className="text-2xl font-serif font-bold text-white mb-3">Dúvidas sobre a rota ideal?</h3>
+                        <p className="text-white/60 text-sm sm:text-base mb-8 max-w-lg mx-auto">
+                            O diagnóstico é rápido, gratuito e oferece direcionamento imediato sobre a viabilidade legal do seu negócio no Paraguai.
+                        </p>
+                        <Button
+                            size="lg"
+                            asChild
+                            className="bg-white hover:bg-white/90 text-muda-navy h-14 px-8 rounded-xl font-bold shadow-lg transition-transform hover:scale-105"
+                        >
+                            <Link href="/diagnostico">
+                                Fazer diagnóstico gratuito
+                                <ArrowRight className="ml-2 w-5 h-5" />
+                            </Link>
+                        </Button>
+                    </div>
                 </motion.div>
             </div>
         </div>

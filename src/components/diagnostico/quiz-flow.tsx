@@ -208,7 +208,7 @@ export function QuizFlow(): React.ReactElement {
             transition={{ duration: 0.3 }}
             className="space-y-8"
         >
-            <h2 className="text-2xl sm:text-3xl font-sora font-semibold text-foreground">
+            <h2 className="text-2xl sm:text-3xl font-serif font-bold text-foreground">
                 {currentQ.question}
             </h2>
             <div className="space-y-3">
@@ -237,8 +237,8 @@ export function QuizFlow(): React.ReactElement {
             className="space-y-6"
         >
             <div className="text-center mb-8">
-                <h2 className="text-3xl font-sora font-semibold text-foreground mb-3">Último passo!</h2>
-                <p className="text-foreground/70">Preencha os dados abaixo para visualizar seu score e liberar seu relatório executivo.</p>
+                <h2 className="text-3xl font-serif font-bold text-foreground mb-3">Último passo!</h2>
+                <p className="text-muted-foreground text-sm">Preencha os dados abaixo para visualizar seu score e liberar seu relatório executivo.</p>
             </div>
 
             <form onSubmit={handleFormSubmit} className="space-y-5 bg-card p-8 rounded-2xl border border-border/50 shadow-sm">
@@ -270,8 +270,8 @@ export function QuizFlow(): React.ReactElement {
                     </Label>
                 </div>
 
-                <Button type="submit" className="w-full h-14 text-lg bg-muda-navy hover:bg-muda-navy/90 text-white mt-4" disabled={!formData.consent}>
-                    Ver Meu Resultado <ArrowRight className="ml-2 w-5 h-5" />
+                <Button type="submit" className="w-full h-14 text-base bg-primary hover:bg-primary/95 text-primary-foreground mt-4 font-semibold" disabled={!formData.consent}>
+                    Ver Meu Resultado <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
             </form>
         </motion.div>
@@ -281,9 +281,9 @@ export function QuizFlow(): React.ReactElement {
         const score = calculateScore();
         let fitLevel = "Baixo Fit";
         let message = "Pelo seu perfil atual, o caminho mais seguro é educacional e preparatório.";
-        let colorClass = "text-muda-red bg-muda-red/10 border-muda-red/20";
+        let colorClass = "text-muda-red bg-muda-red/5 border-muda-red/15";
         let ActionButton = (
-            <Button variant="outline" className="w-full h-12" asChild>
+            <Button variant="outline" className="w-full h-12 border-border text-foreground hover:bg-secondary font-semibold" asChild>
                     <a href="https://wa.me/5581992992676?text=Olá!%20Fiz%20o%20diagnóstico%20da%20Muda%20Paraguai%20e%20gostaria%20de%20saber%20mais." target="_blank" rel="noopener noreferrer">
                         Falar com especialista
                     </a>
@@ -292,10 +292,10 @@ export function QuizFlow(): React.ReactElement {
 
         if (score >= 70 && !illicitIntent) {
             fitLevel = "Alto Fit";
-            message = "Você tem alto fit para uma jornada assistida. Nossa equipe fará contato em breve.";
-            colorClass = "text-muda-green bg-muda-green/10 border-muda-green/20";
+            message = "Você possui alto fit para estruturação societária e tributária. Nossa equipe entrará em contato em breve.";
+            colorClass = "text-muda-green bg-muda-green/5 border-muda-green/15";
             ActionButton = (
-                <Button className="w-full h-12 bg-gradient-to-r from-muda-green to-muda-blue text-white hover:opacity-90 font-semibold shadow-lg" asChild>
+                <Button className="w-full h-12 bg-primary hover:bg-primary/95 text-primary-foreground font-semibold shadow-sm" asChild>
                     <a href={`https://wa.me/5581992992676?text=Olá!%20Fiz%20o%20diagnóstico%20e%20obtive%20score%20${score}%20(Alto%20Fit).%20Gostaria%20de%20agendar%20uma%20reunião.`} target="_blank" rel="noopener noreferrer">
                         Agendar Reunião Completa (45 min)
                     </a>
@@ -303,10 +303,10 @@ export function QuizFlow(): React.ReactElement {
             );
         } else if (score >= 40 && !illicitIntent) {
             fitLevel = "Médio Fit";
-            message = "Você tem fit parcial. Recomendamos uma triagem curta para validar o cenário ideal.";
-            colorClass = "text-muda-yellow bg-muda-yellow/10 border-muda-yellow/20";
+            message = "Você possui alinhamento parcial. Recomendamos uma triagem breve para desenhar o cenário ideal.";
+            colorClass = "text-muda-yellow bg-muda-yellow/5 border-muda-yellow/15";
             ActionButton = (
-                <Button className="w-full h-12 bg-muda-blue text-white hover:opacity-90 font-semibold shadow-lg" asChild>
+                <Button className="w-full h-12 bg-primary hover:bg-primary/95 text-primary-foreground font-semibold shadow-sm" asChild>
                     <a href={`https://wa.me/5581992992676?text=Olá!%20Fiz%20o%20diagnóstico%20e%20obtive%20score%20${score}%20(Médio%20Fit).%20Gostaria%20de%20uma%20triagem.`} target="_blank" rel="noopener noreferrer">
                         Agendar Triagem (20 min)
                     </a>
@@ -317,52 +317,49 @@ export function QuizFlow(): React.ReactElement {
         if (illicitIntent) {
             return (
                 <div className="text-center space-y-6">
-                    <div className="w-20 h-20 rounded-full bg-muda-red/10 flex items-center justify-center mx-auto mb-4">
-                        <ShieldAlert className="w-10 h-10 text-muda-red" />
+                    <div className="w-12 h-12 rounded-full bg-muda-red/10 flex items-center justify-center mx-auto mb-4 border border-muda-red/15">
+                        <ShieldAlert className="w-5 h-5 text-muda-red" />
                     </div>
-                    <h2 className="text-3xl font-sora font-semibold text-foreground">Operação Bloqueada</h2>
-                    <p className="text-lg text-foreground/70 max-w-xl mx-auto p-6 bg-card border-2 border-muda-red/20 rounded-xl">
-                        A MUDA PARAGUAI adota política rígida de Compliance Antifraude.
-                        Identificamos intenções incompatíveis com nossos pilares éticos e legais.
-                        Não seguiremos com o diagnóstico nem aceitaremos agendamentos de reunião.
+                    <h2 className="text-2xl font-serif font-bold text-foreground">Operação Não Habilitada</h2>
+                    <p className="text-sm text-muted-foreground max-w-xl mx-auto p-6 bg-card border border-muda-red/15 rounded-2xl">
+                        A Muda Paraguai segue rígidos padrões de transparência tributária bilateral.
+                        Identificamos respostas incompatíveis com nossos termos de compliance éticos e legais.
+                        Não realizamos planejamento para fins de fraude fiscal, ocultação ou sonegação.
                     </p>
-                    <div className="pt-8">
-                        <Button variant="outline" onClick={() => window.location.href = "/"}>Voltar para o site</Button>
+                    <div className="pt-6">
+                        <Button variant="outline" className="border-border text-foreground hover:bg-secondary font-semibold" onClick={() => window.location.href = "/"}>Voltar ao site</Button>
                     </div>
                 </div>
             );
         }
 
         return (
-            <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="space-y-8">
+            <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="space-y-8">
                 <div className="text-center">
-                    <h2 className="text-3xl font-sora font-bold text-foreground mb-4">Seu Diagnóstico está Pronto</h2>
-                    <p className="text-foreground/70">Baseado nas suas respostas, calculamos seu índice de aderência sistêmica.</p>
+                    <h2 className="text-3xl font-serif font-bold text-foreground mb-3">Diagnóstico Disponível</h2>
+                    <p className="text-sm text-muted-foreground">Índice de conformidade calculado com base nas suas respostas.</p>
                 </div>
 
-                <Card className="p-8 border-border/50 text-center relative overflow-hidden bg-background shadow-md">
-                    {/* Background Glow */}
-                    <div className={`absolute -top-10 -right-10 w-40 h-40 rounded-full blur-3xl opacity-30 ${colorClass.split(' ')[0]}`} />
-
-                    <div className="mb-6">
-                        <span className="text-6xl font-sora font-black text-foreground">{score}</span>
-                        <span className="text-xl text-foreground/50 font-medium">/100</span>
+                <Card className="p-8 border-border text-center relative overflow-hidden bg-card shadow-sm rounded-3xl">
+                    <div className="mb-5">
+                        <span className="text-5xl font-serif font-bold text-primary">{score}</span>
+                        <span className="text-sm text-muted-foreground font-medium ml-1">/ 100</span>
                     </div>
 
-                    <div className={`inline-flex items-center justify-center px-4 py-1.5 rounded-full border mb-6 ${colorClass}`}>
-                        <span className="font-semibold">{fitLevel}</span>
+                    <div className={`inline-flex items-center justify-center px-3.5 py-1 rounded-md border text-xs font-bold uppercase tracking-wider mb-6 ${colorClass}`}>
+                        <span>{fitLevel}</span>
                     </div>
 
-                    <p className="text-foreground/80 text-lg leading-relaxed max-w-lg mx-auto mb-10">
+                    <p className="text-foreground/90 text-base leading-relaxed max-w-md mx-auto mb-8 font-medium">
                         {message}
                     </p>
 
-                    <div className="space-y-4 max-w-sm mx-auto">
+                    <div className="space-y-3.5 max-w-xs mx-auto">
                         {ActionButton}
 
-                        <Button variant="outline" className="w-full h-12 bg-card border-border/60 group" asChild>
+                        <Button variant="outline" className="w-full h-11 border-border text-foreground hover:bg-secondary font-semibold group rounded-lg" asChild>
                             <a href="https://wa.me/5581992992676?text=Olá!%20Gostaria%20de%20receber%20meu%20relatório%20executivo%20da%20Muda%20Paraguai." target="_blank" rel="noopener noreferrer">
-                                <FileText className="w-4 h-4 mr-2 text-foreground/60 group-hover:text-primary transition-colors" />
+                                <FileText className="w-4 h-4 mr-2 text-muted-foreground group-hover:text-primary transition-colors" />
                                 Solicitar Relatório Executivo
                             </a>
                         </Button>
@@ -385,9 +382,9 @@ export function QuizFlow(): React.ReactElement {
                         <span>Passo {Math.min(step + 1, 11)} de 11</span>
                         <span>{Math.round(progress)}% Completo</span>
                     </div>
-                    <div className="w-full h-2 bg-muda-navy/10 rounded-full overflow-hidden">
+                    <div className="w-full h-2 bg-secondary rounded-full overflow-hidden">
                         <motion.div
-                            className="h-full bg-muda-green"
+                            className="h-full bg-primary"
                             initial={{ width: 0 }}
                             animate={{ width: `${progress}%` }}
                             transition={{ duration: 0.5, ease: "easeInOut" }}

@@ -3,6 +3,7 @@
 import { useRef, useEffect } from "react";
 import { motion, useInView, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { TrendingUp, Building2, Users, Clock } from "lucide-react";
+import { fadeUpItem } from "@/lib/animations";
 
 function AnimatedNumber({ value, suffix = "", prefix = "" }: { value: number; suffix?: string; prefix?: string }) {
     const ref = useRef<HTMLSpanElement>(null);
@@ -30,9 +31,11 @@ const stats = [
         value: 120,
         suffix: "+",
         label: "Empresas estruturadas",
-        description: "Operando legalmente no Paraguai",
-        color: "muda-green",
-        delay: 0,
+        description: "Operando legalmente no Paraguai.",
+        borderClass: "border-t-muda-green",
+        bgClass: "bg-white/5",
+        colorClass: "text-muda-green",
+        glow: "shadow-[0_0_30px_rgba(0,130,56,0.15)]",
     },
     {
         icon: TrendingUp,
@@ -40,74 +43,81 @@ const stats = [
         suffix: "%",
         prefix: "até ",
         label: "Carga tributária final",
-        description: "Contra 30–50% em estruturas brasileiras",
-        color: "muda-yellow",
-        delay: 0.1,
+        description: "Contra 30–50% em estruturas brasileiras.",
+        borderClass: "border-t-muda-yellow",
+        bgClass: "bg-white/5",
+        colorClass: "text-muda-yellow",
+        glow: "shadow-[0_0_30px_rgba(255,199,44,0.15)]",
     },
     {
         icon: Users,
         value: 3,
         suffix: " perfis",
         label: "Trilhas especializadas",
-        description: "Digital, Industrial e Investidor Global",
-        color: "muda-blue",
-        delay: 0.2,
+        description: "Serviços Digitais, Indústria e Investidor Global.",
+        borderClass: "border-t-muda-blue",
+        bgClass: "bg-white/5",
+        colorClass: "text-muda-blue",
+        glow: "shadow-[0_0_30px_rgba(0,56,168,0.15)]",
     },
     {
         icon: Clock,
         value: 60,
         suffix: " dias",
-        label: "Prazo médio de abertura",
-        description: "Do diagnóstico ao RUC emitido",
-        color: "muda-red",
-        delay: 0.3,
+        label: "Prazo médio",
+        description: "Do diagnóstico ao RUC emitido.",
+        borderClass: "border-t-muda-red",
+        bgClass: "bg-white/5",
+        colorClass: "text-muda-red",
+        glow: "shadow-[0_0_30px_rgba(213,43,30,0.15)]",
     },
 ];
 
 export function StatsSection(): React.ReactElement {
     return (
-        <section className="py-20 lg:py-28 bg-background border-y border-white/5 relative overflow-hidden">
-            {/* Subtle grid */}
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff06_1px,transparent_1px),linear-gradient(to_bottom,#ffffff06_1px,transparent_1px)] bg-[size:48px_48px] pointer-events-none" />
+        <section className="py-20 lg:py-28 bg-muda-navy relative overflow-hidden text-white border-t border-white/5">
+            {/* Immersive Glowing Orbs */}
+            <div className="absolute top-0 left-1/4 w-[500px] h-[500px] rounded-full blur-[120px] opacity-20 bg-muda-green pointer-events-none mix-blend-screen" />
+            <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] rounded-full blur-[100px] opacity-20 bg-muda-blue pointer-events-none mix-blend-screen" />
 
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl relative z-10">
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 15 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-center mb-14"
+                    className="text-center mb-16"
                 >
-                    <h2 className="text-3xl sm:text-4xl font-sora font-semibold text-white tracking-tighter mb-3">
-                        Números que importam
+                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-normal tracking-tight mb-4 text-white">
+                        Números que <span className="text-transparent bg-clip-text bg-gradient-to-r from-muda-green via-muda-yellow to-muda-red font-bold">Importam</span>
                     </h2>
-                    <p className="text-foreground/50 text-base">
-                        Resultados reais. Metodologia auditável.
+                    <p className="text-white/70 text-sm sm:text-base max-w-md mx-auto">
+                        Resultados reais estruturados sob rígido critério de conformidade legal binacional.
                     </p>
                 </motion.div>
 
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+                {/* Grid layout with Dark Glassmorphism cards */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     {stats.map((stat, i) => (
                         <motion.div
                             key={stat.label}
-                            initial={{ opacity: 0, y: 30 }}
+                            initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-60px" }}
-                            transition={{ duration: 0.5, delay: stat.delay }}
-                            className="group relative rounded-2xl border border-white/10 bg-card/60 backdrop-blur-sm p-6 lg:p-8 flex flex-col items-center text-center hover:border-white/20 hover:-translate-y-1 transition-all duration-300 overflow-hidden"
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: i * 0.1 }}
+                            className={`flex flex-col items-center text-center p-8 rounded-3xl border border-white/10 ${stat.bgClass} backdrop-blur-xl border-t-4 ${stat.borderClass} hover:-translate-y-2 transition-all duration-300 hover:${stat.glow} group`}
                         >
-                            {/* Hover glow */}
-                            <div className={`absolute inset-0 bg-${stat.color}/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-2xl`} />
-
-                            <div className={`w-12 h-12 rounded-xl bg-${stat.color}/10 border border-${stat.color}/20 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300`}>
-                                <stat.icon className={`w-5 h-5 text-${stat.color}`} />
+                            {/* Glowing Icon */}
+                            <div className="w-12 h-12 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+                                <stat.icon className={`w-6 h-6 ${stat.colorClass}`} />
                             </div>
 
-                            <div className={`text-3xl lg:text-4xl font-sora font-black text-${stat.color} mb-2 tracking-tight`}>
+                            {/* Large stat number with specific national color */}
+                            <div className={`text-4xl lg:text-5xl font-serif font-bold mb-3 tracking-tight ${stat.colorClass} drop-shadow-md`}>
                                 <AnimatedNumber value={stat.value} suffix={stat.suffix} prefix={stat.prefix} />
                             </div>
 
-                            <p className="text-sm font-semibold text-white mb-1">{stat.label}</p>
-                            <p className="text-xs text-foreground/50 leading-relaxed">{stat.description}</p>
+                            <p className="text-base font-bold text-white mb-2">{stat.label}</p>
+                            <p className="text-xs text-white/60 leading-relaxed max-w-[200px]">{stat.description}</p>
                         </motion.div>
                     ))}
                 </div>
