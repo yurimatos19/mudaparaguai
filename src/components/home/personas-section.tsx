@@ -66,7 +66,6 @@ export function PersonasSection(): React.ReactElement {
                                         </div>
                                         <div>
                                             <h3 className={`font-bold text-lg mb-1 ${isActive ? "text-white" : ""}`}>{persona.title}</h3>
-                                            <p className={`text-xs ${isActive ? "text-white/80" : "text-muted-foreground"}`}>{persona.subtitle}</p>
                                         </div>
                                     </div>
                                 </button>
@@ -112,7 +111,7 @@ export function PersonasSection(): React.ReactElement {
                                     <div className="relative z-10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                                         <div>
                                             <span className="text-xs font-bold text-muda-yellow uppercase tracking-widest block mb-1">Impacto Financeiro</span>
-                                            <span className="text-lg font-serif font-bold text-white">{PERSONAS[activeTab].taxSaving}</span>
+                                            <span className="text-lg font-serif font-bold text-white">{PERSONAS[activeTab].benefits[0]}</span>
                                         </div>
                                         <a href="#contato" className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-white text-primary text-sm font-bold hover:bg-muda-offwhite transition-colors">
                                             Analisar meu caso
