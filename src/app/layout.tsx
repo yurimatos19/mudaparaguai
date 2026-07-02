@@ -16,7 +16,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://mudaparaguai.com.br"),
+  metadataBase: new URL("https://mudaparaguai.com"),
   title: {
     default: "Muda Paraguai | Expansão de Negócios e Redução Tributária",
     template: "%s | Muda Paraguai",
@@ -28,24 +28,15 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://mudaparaguai.com.br",
+    url: "https://mudaparaguai.com",
     title: "Muda Paraguai | Liberte sua empresa da burocracia e impostos",
     description: "Estruturamos sua operação no Paraguai (1% a 10% de imposto) mantendo seu negócio 100% legal e rentável. Foque em crescer.",
     siteName: "Muda Paraguai",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Logo Muda Paraguai",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Muda Paraguai | Expansão Sem Limites para Negócios",
     description: "Estruturamos sua operação no Paraguai with carga tributária mínima (1-10%). Crescimento com segurança jurídica.",
-    images: ["/og-image.png"],
   },
   robots: {
     index: true,
