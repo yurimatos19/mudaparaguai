@@ -102,7 +102,7 @@ export function BridgeSection(): React.ReactElement {
                                 </div>
 
                                 {/* Center Label */}
-                                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-7">
+                                <div className="hidden sm:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-7">
                                     <motion.span
                                         initial={{ opacity: 0, y: 5 }}
                                         whileInView={{ opacity: 1, y: 0 }}
