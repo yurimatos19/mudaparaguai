@@ -82,7 +82,7 @@ export function PersonasSection(): React.ReactElement {
                                 animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                                 exit={{ opacity: 0, y: -20, filter: "blur(8px)" }}
                                 transition={{ duration: 0.4 }}
-                                className="bg-white/80 backdrop-blur-xl border border-white rounded-3xl p-8 sm:p-10 shadow-xl relative overflow-hidden"
+                                className="bg-white/80 backdrop-blur-xl border border-white rounded-3xl p-6 sm:p-10 shadow-xl relative overflow-hidden"
                             >
                                 {/* Decorative gradient corner */}
                                 <div className="absolute -top-24 -right-24 w-48 h-48 bg-muda-blue/10 rounded-full blur-3xl pointer-events-none" />

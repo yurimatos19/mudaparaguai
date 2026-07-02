@@ -96,7 +96,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${lora.variable} ${inter.variable} font-sans antialiased text-foreground bg-background min-h-screen flex flex-col`}
+        className={`${lora.variable} ${inter.variable} font-sans antialiased text-foreground bg-background min-h-screen flex flex-col overflow-x-hidden`}
       >
         <Header />
         <main className="flex-grow pt-24">

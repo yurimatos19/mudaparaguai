@@ -196,7 +196,7 @@ export function Hero(): React.ReactElement {
                             {/* Headline */}
                             <motion.h1
                                 variants={itemVariants}
-                                className="font-sans text-5xl sm:text-6xl lg:text-[4rem] xl:text-[4.5rem] font-black tracking-tight leading-[1.05] mb-6 text-foreground"
+                                className="font-sans text-4xl sm:text-5xl lg:text-[4rem] xl:text-[4.5rem] font-black tracking-tight leading-[1.1] mb-6 text-foreground"
                             >
                                 Liberte sua empresa do{" "}
                                 <span className="inline-block relative">

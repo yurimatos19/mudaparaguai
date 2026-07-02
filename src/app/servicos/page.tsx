@@ -146,7 +146,7 @@ export default function ServicosPage(): React.ReactElement {
                                     </div>
                                 )}
 
-                                <div className="p-8 flex flex-col flex-grow relative z-10">
+                                <div className="p-6 sm:p-8 flex flex-col flex-grow relative z-10">
                                     {/* Badge */}
                                     <div className={`inline-flex w-fit items-center px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest mb-6 border ${
                                         isPrimaryCard
