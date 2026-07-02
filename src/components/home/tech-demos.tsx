@@ -15,8 +15,8 @@ export function TechDemos(): React.ReactElement {
     return (
         <section className="py-24 lg:py-32 bg-muda-navy text-white relative overflow-hidden">
             {/* Deep intense glows for Tech section */}
-            <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-muda-blue/20 rounded-full blur-[150px] pointer-events-none mix-blend-screen" />
-            <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-muda-green/10 rounded-full blur-[120px] pointer-events-none mix-blend-screen" />
+            <div className="hidden lg:block absolute top-0 right-0 w-[800px] h-[800px] bg-muda-blue/20 rounded-full blur-[150px] pointer-events-none mix-blend-screen" />
+            <div className="hidden lg:block absolute bottom-0 left-0 w-[600px] h-[600px] bg-muda-green/10 rounded-full blur-[120px] pointer-events-none mix-blend-screen" />
             
             {/* Tech grid background pattern */}
             <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:32px_32px] opacity-20" />

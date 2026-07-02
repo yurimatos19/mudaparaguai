@@ -77,8 +77,8 @@ export function StatsSection(): React.ReactElement {
     return (
         <section className="py-20 lg:py-28 bg-muda-navy relative overflow-hidden text-white border-t border-white/5">
             {/* Immersive Glowing Orbs */}
-            <div className="absolute top-0 left-1/4 w-[500px] h-[500px] rounded-full blur-[120px] opacity-20 bg-muda-green pointer-events-none mix-blend-screen" />
-            <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] rounded-full blur-[100px] opacity-20 bg-muda-blue pointer-events-none mix-blend-screen" />
+            <div className="hidden lg:block absolute top-0 left-1/4 w-[500px] h-[500px] rounded-full blur-[120px] opacity-20 bg-muda-green pointer-events-none mix-blend-screen" />
+            <div className="hidden lg:block absolute bottom-0 right-1/4 w-[400px] h-[400px] rounded-full blur-[100px] opacity-20 bg-muda-blue pointer-events-none mix-blend-screen" />
 
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl relative z-10">
                 <motion.div
@@ -104,7 +104,7 @@ export function StatsSection(): React.ReactElement {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: i * 0.1 }}
-                            className={`flex flex-col items-center text-center p-8 rounded-3xl border border-white/10 ${stat.bgClass} backdrop-blur-xl border-t-4 ${stat.borderClass} hover:-translate-y-2 transition-all duration-300 hover:${stat.glow} group`}
+                            className={`flex flex-col items-center text-center p-6 sm:p-8 rounded-3xl border border-white/10 ${stat.bgClass} backdrop-blur-xl border-t-4 ${stat.borderClass} hover:-translate-y-2 transition-all duration-300 hover:${stat.glow} group`}
                         >
                             {/* Glowing Icon */}
                             <div className="w-12 h-12 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">

@@ -161,9 +161,9 @@ export function Hero(): React.ReactElement {
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000008_1px,transparent_1px),linear-gradient(to_bottom,#00000008_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] z-0" />
             
             {/* Glowing Orbs */}
-            <div className="absolute top-[10%] left-[-10%] w-[50vw] h-[50vw] max-w-[600px] max-h-[600px] rounded-full bg-muda-green/15 blur-[100px] pointer-events-none z-0 mix-blend-multiply" />
-            <div className="absolute top-[30%] right-[-5%] w-[40vw] h-[40vw] max-w-[500px] max-h-[500px] rounded-full bg-primary/15 blur-[100px] pointer-events-none z-0 mix-blend-multiply" />
-            <div className="absolute bottom-[-10%] left-[20%] w-[40vw] h-[40vw] max-w-[400px] max-h-[400px] rounded-full bg-muda-yellow/15 blur-[100px] pointer-events-none z-0 mix-blend-multiply" />
+            <div className="hidden lg:block absolute top-[10%] left-[-10%] w-[50vw] h-[50vw] max-w-[600px] max-h-[600px] rounded-full bg-muda-green/15 blur-[100px] pointer-events-none z-0 mix-blend-multiply" />
+            <div className="hidden lg:block absolute top-[30%] right-[-5%] w-[40vw] h-[40vw] max-w-[500px] max-h-[500px] rounded-full bg-primary/15 blur-[100px] pointer-events-none z-0 mix-blend-multiply" />
+            <div className="hidden lg:block absolute bottom-[-10%] left-[20%] w-[40vw] h-[40vw] max-w-[400px] max-h-[400px] rounded-full bg-muda-yellow/15 blur-[100px] pointer-events-none z-0 mix-blend-multiply" />
 
             {/* ── Content ────────────────────────────────────────────────── */}
             <motion.div

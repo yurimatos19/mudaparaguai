@@ -14,8 +14,8 @@ export function BridgeSection(): React.ReactElement {
     return (
         <section className="py-24 lg:py-32 bg-background relative overflow-hidden isolate">
             {/* Background Orbs to bring it to life */}
-            <div className="absolute top-1/4 -left-32 w-[600px] h-[600px] bg-muda-green/10 rounded-full blur-[100px] pointer-events-none mix-blend-multiply" />
-            <div className="absolute bottom-1/4 -right-32 w-[600px] h-[600px] bg-muda-red/10 rounded-full blur-[100px] pointer-events-none mix-blend-multiply" />
+            <div className="hidden lg:block absolute top-1/4 -left-32 w-[600px] h-[600px] bg-muda-green/10 rounded-full blur-[100px] pointer-events-none mix-blend-multiply" />
+            <div className="hidden lg:block absolute bottom-1/4 -right-32 w-[600px] h-[600px] bg-muda-red/10 rounded-full blur-[100px] pointer-events-none mix-blend-multiply" />
 
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="max-w-4xl mx-auto text-center mb-16 lg:mb-20">

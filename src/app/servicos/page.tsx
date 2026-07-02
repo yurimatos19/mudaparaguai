@@ -91,8 +91,8 @@ export default function ServicosPage(): React.ReactElement {
     return (
         <div className="bg-muda-navy pt-28 pb-24 min-h-screen relative overflow-hidden text-white">
             {/* Elegant patriotic glowing ambient blobs */}
-            <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-muda-blue/20 rounded-full blur-[150px] pointer-events-none mix-blend-screen" />
-            <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-muda-green/10 rounded-full blur-[120px] pointer-events-none mix-blend-screen" />
+            <div className="hidden lg:block absolute top-0 right-0 w-[800px] h-[800px] bg-muda-blue/20 rounded-full blur-[150px] pointer-events-none mix-blend-screen" />
+            <div className="hidden lg:block absolute bottom-0 left-0 w-[600px] h-[600px] bg-muda-green/10 rounded-full blur-[120px] pointer-events-none mix-blend-screen" />
 
             {/* Grid pattern background */}
             <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:32px_32px] opacity-30 pointer-events-none" />

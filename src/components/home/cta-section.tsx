@@ -8,7 +8,7 @@ export function CTASection(): React.ReactElement {
         <section className="py-24 lg:py-32 relative overflow-hidden bg-muda-navy">
             {/* Immersive glowing background */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-tr from-muda-green/30 via-muda-blue/20 to-muda-red/30 rounded-full blur-[150px] mix-blend-screen opacity-50" />
+                <div className="hidden lg:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-tr from-muda-green/30 via-muda-blue/20 to-muda-red/30 rounded-full blur-[150px] mix-blend-screen opacity-50" />
                 <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.03] mix-blend-overlay" />
             </div>
 

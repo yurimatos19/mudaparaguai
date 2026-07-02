@@ -81,7 +81,7 @@ export function ProcessTimeline(): React.ReactElement {
                                     </div>
 
                                     {/* Content Card (Glass & Hover FX) */}
-                                    <div className="relative bg-white/70 backdrop-blur-md border border-white rounded-3xl p-6 sm:p-10 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+                                    <div className="relative bg-white/70 backdrop-blur-md border border-white rounded-3xl p-5 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden">
                                         
                                         {/* Subtle colored glow inside card on hover */}
                                         <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-primary/5 to-transparent rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />

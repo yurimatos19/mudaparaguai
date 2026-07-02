@@ -11,7 +11,7 @@ export function PersonasSection(): React.ReactElement {
     return (
         <section className="py-24 lg:py-32 bg-background relative overflow-hidden" id="para-quem">
             {/* Background Orbs */}
-            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-muda-yellow/10 rounded-full blur-[120px] pointer-events-none mix-blend-multiply" />
+            <div className="hidden lg:block absolute top-0 right-0 w-[500px] h-[500px] bg-muda-yellow/10 rounded-full blur-[120px] pointer-events-none mix-blend-multiply" />
             
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl relative z-10">
                 <div className="text-center mb-16">
