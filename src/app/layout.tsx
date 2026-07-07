@@ -52,6 +52,7 @@ export const metadata: Metadata = {
 };
 
 import { WhatsAppButton } from "@/components/ui/whatsapp-button";
+import { CookieConsent } from "@/components/ui/cookie-consent";
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 
 export default function RootLayout({
@@ -83,6 +84,21 @@ export default function RootLayout({
     <html lang="pt-BR" className="scroll-smooth">
       <head>
         <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('consent', 'default', {
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'analytics_storage': 'denied',
+                'wait_for_update': 500
+              });
+            `,
+          }}
+        />
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
@@ -97,6 +113,7 @@ export default function RootLayout({
           {children}
         </main>
         <WhatsAppButton />
+        <CookieConsent />
         <Footer />
       </body>
     </html>
