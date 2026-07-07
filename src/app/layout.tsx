@@ -88,6 +88,7 @@ export default function RootLayout({
         />
       </head>
       <GoogleTagManager gtmId="GTM-P7W5GSWX" />
+      <GoogleAnalytics gaId="AW-18306339409" />
       <body
         className={`${lora.variable} ${inter.variable} font-sans antialiased text-foreground bg-background min-h-screen flex flex-col overflow-x-hidden`}
       >
@@ -97,7 +98,6 @@ export default function RootLayout({
         </main>
         <WhatsAppButton />
         <Footer />
-        <GoogleAnalytics gaId="AW-8686022217" />
       </body>
     </html>
   );

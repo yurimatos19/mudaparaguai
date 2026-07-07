@@ -153,7 +153,7 @@ export function QuizFlow(): React.ReactElement {
         e.preventDefault();
         setStep(11); // Show results immediately (optimistic UI)
         
-        sendGAEvent({ event: 'generate_lead', value: 'diagnostico' });
+        sendGAEvent({ event: "conversion", send_to: "AW-18306339409/p-sWCP3NwMwcENGkkplE" });
 
         // Calculate data to send
         const score = calculateScore();
@@ -287,7 +287,7 @@ export function QuizFlow(): React.ReactElement {
         let colorClass = "text-muda-red bg-muda-red/5 border-muda-red/15";
         let ActionButton = (
             <Button variant="outline" className="w-full h-12 border-border text-foreground hover:bg-secondary font-semibold" asChild>
-                    <a href="https://wa.me/5581992992676?text=Olá!%20Fiz%20o%20diagnóstico%20da%20Muda%20Paraguai%20e%20gostaria%20de%20saber%20mais." target="_blank" rel="noopener noreferrer" onClick={() => sendGAEvent({ event: 'click_whatsapp_diagnostico', label: 'especialista' })}>
+                    <a href="https://wa.me/5581992992676?text=Olá!%20Fiz%20o%20diagnóstico%20da%20Muda%20Paraguai%20e%20gostaria%20de%20saber%20mais." target="_blank" rel="noopener noreferrer" onClick={() => sendGAEvent({ event: "conversion", send_to: "AW-18306339409/p-sWCP3NwMwcENGkkplE" })}>
                         Falar com especialista
                     </a>
                 </Button>
@@ -299,7 +299,7 @@ export function QuizFlow(): React.ReactElement {
             colorClass = "text-muda-green bg-muda-green/5 border-muda-green/15";
             ActionButton = (
                 <Button className="w-full h-12 bg-primary hover:bg-primary/95 text-primary-foreground font-semibold shadow-sm" asChild>
-                    <a href={`https://wa.me/5581992992676?text=Olá!%20Fiz%20o%20diagnóstico%20e%20obtive%20score%20${score}%20(Alto%20Fit).%20Gostaria%20de%20agendar%20uma%20reunião.`} target="_blank" rel="noopener noreferrer" onClick={() => sendGAEvent({ event: 'click_whatsapp_diagnostico', label: 'reuniao_alto_fit' })}>
+                    <a href={`https://wa.me/5581992992676?text=Olá!%20Fiz%20o%20diagnóstico%20e%20obtive%20score%20${score}%20(Alto%20Fit).%20Gostaria%20de%20agendar%20uma%20reunião.`} target="_blank" rel="noopener noreferrer" onClick={() => sendGAEvent({ event: "conversion", send_to: "AW-18306339409/p-sWCP3NwMwcENGkkplE" })}>
                         Agendar Reunião Completa (45 min)
                     </a>
                 </Button>
@@ -310,7 +310,7 @@ export function QuizFlow(): React.ReactElement {
             colorClass = "text-muda-yellow bg-muda-yellow/5 border-muda-yellow/15";
             ActionButton = (
                 <Button className="w-full h-12 bg-primary hover:bg-primary/95 text-primary-foreground font-semibold shadow-sm" asChild>
-                    <a href={`https://wa.me/5581992992676?text=Olá!%20Fiz%20o%20diagnóstico%20e%20obtive%20score%20${score}%20(Médio%20Fit).%20Gostaria%20de%20uma%20triagem.`} target="_blank" rel="noopener noreferrer" onClick={() => sendGAEvent({ event: 'click_whatsapp_diagnostico', label: 'triagem_medio_fit' })}>
+                    <a href={`https://wa.me/5581992992676?text=Olá!%20Fiz%20o%20diagnóstico%20e%20obtive%20score%20${score}%20(Médio%20Fit).%20Gostaria%20de%20uma%20triagem.`} target="_blank" rel="noopener noreferrer" onClick={() => sendGAEvent({ event: "conversion", send_to: "AW-18306339409/p-sWCP3NwMwcENGkkplE" })}>
                         Agendar Triagem (20 min)
                     </a>
                 </Button>
@@ -361,7 +361,7 @@ export function QuizFlow(): React.ReactElement {
                         {ActionButton}
 
                         <Button variant="outline" className="w-full h-11 border-border text-foreground hover:bg-secondary font-semibold group rounded-lg" asChild>
-                            <a href="https://wa.me/5581992992676?text=Olá!%20Gostaria%20de%20receber%20meu%20relatório%20executivo%20da%20Muda%20Paraguai." target="_blank" rel="noopener noreferrer" onClick={() => sendGAEvent({ event: 'click_whatsapp_diagnostico', label: 'relatorio_executivo' })}>
+                            <a href="https://wa.me/5581992992676?text=Olá!%20Gostaria%20de%20receber%20meu%20relatório%20executivo%20da%20Muda%20Paraguai." target="_blank" rel="noopener noreferrer" onClick={() => sendGAEvent({ event: "conversion", send_to: "AW-18306339409/p-sWCP3NwMwcENGkkplE" })}>
                                 <FileText className="w-4 h-4 mr-2 text-muted-foreground group-hover:text-primary transition-colors" />
                                 Solicitar Relatório Executivo
                             </a>

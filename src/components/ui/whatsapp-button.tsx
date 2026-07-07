@@ -55,7 +55,7 @@ export function WhatsAppButton(): React.ReactElement | null {
                     rel="noopener noreferrer"
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}
-                    onClick={() => sendGAEvent({ event: "click_whatsapp" })}
+                    onClick={() => sendGAEvent({ event: "conversion", send_to: "AW-18306339409/p-sWCP3NwMwcENGkkplE" })}
                     className="relative group flex items-center justify-center w-14 h-14 bg-[#25D366] text-white rounded-full shadow-xl hover:scale-110 transition-transform duration-300"
                     aria-label="Falar no WhatsApp"
                 >
