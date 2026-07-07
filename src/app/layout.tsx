@@ -52,6 +52,7 @@ export const metadata: Metadata = {
 };
 
 import { WhatsAppButton } from "@/components/ui/whatsapp-button";
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 
 export default function RootLayout({
   children,
@@ -86,6 +87,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
+      <GoogleTagManager gtmId="GTM-P7W5GSWX" />
       <body
         className={`${lora.variable} ${inter.variable} font-sans antialiased text-foreground bg-background min-h-screen flex flex-col overflow-x-hidden`}
       >
@@ -95,6 +97,7 @@ export default function RootLayout({
         </main>
         <WhatsAppButton />
         <Footer />
+        <GoogleAnalytics gaId="AW-8686022217" />
       </body>
     </html>
   );
